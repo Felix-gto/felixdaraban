@@ -1,0 +1,42 @@
+/******************** NAVIGATION BAR ********************/
+mat-toolbar {
+  height: 7.5rem;
+  padding: 0 2.5rem;
+  background-color: transparent;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-brand {
+  width: 5rem;
+  padding-top: 0.5rem;
+  margin-left: 7.5rem;
+}
+
+.navbar-button {
+    margin: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 425;
+}
+
+.navbar-button:hover {
+    color: #5B247A;
+    background-color: #fff;
+}
+
+.contact {
+    margin-right: 7.5rem;
+    padding: 0.75rem 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    transition: background-color 0.5s;
+}
+
+.contact:hover {
+    background-color: white;
+    color: black;
+}

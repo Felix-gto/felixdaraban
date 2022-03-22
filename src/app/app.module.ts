@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // Angular Material Imports - Import the desired modules (Example: https://material.angular.io/components/button/api)
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
     // Angular Material Modules - If you want to use a new Angular Material Component - you need to add the corresponding module
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
