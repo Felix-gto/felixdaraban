@@ -7,6 +7,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+
+// Dark Mode Service
+import { DarkModeService } from './dark-mode.service';
+
+// Language Service
+import { LanguageService } from './language.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +27,11 @@ import { MatButtonModule } from '@angular/material/button';
     // Angular Material Modules - If you want to use a new Angular Material Component - you need to add the corresponding module
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [DarkModeService, LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

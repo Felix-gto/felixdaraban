@@ -1,18 +1,79 @@
-<mat-toolbar>
+<mat-toolbar class="mat-app-background" 
+ [class.dark-mode]="darkModeSet"
+ [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}">
   <a  href="">
     <img src="../../assets/images/logo.png" alt="Felix-Daraban-Logo" class="navbar-brand"/>
   </a>
 
   <span class="spacer"></span>
 
-  <a href="" class="navbar-links"> Portfolio </a>
+  <a href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portfolio </a>
 
-  <a href="" class="navbar-links">CV</a>
+  <a href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">CV</a>
 
   <a>
-    <button mat-raised-button class="navbar-button mat-elevation-z7">
+    <button mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
       Contact me
     </button>
   </a>
+
+  <!-- RO / EN Toggle - Changes language from  based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
+  <div class="ro-en">
+    <div class="romanian" *ngIf="romanianSet; else ro" matTooltip="Switch to English" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
+      <img class="flag" src="../../assets/images/romanian-flag.png" alt="romanian-flag">
+    </div>
+
+    <ng-template #ro>
+      <div class="english" matTooltip="Switch to Romanian" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
+        <img class="flag" src="../../assets/images/english-flag.png" alt="english-flag">
+      </div>      
+    </ng-template>    
+  </div>
+
+  <!-- DARK MODE Toggle - Changes icon based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
+  <mat-icon
+  *ngIf="darkModeSet; else elseBlock" 
+  class="light-mode-icon" 
+  (click)="toggleDarkMode()"
+  matTooltip="Switch to light mode"
+  matTooltipShowDelay="500"
+  matTooltipClass="tooltip">
+  light_mode
+  </mat-icon>
+
+  <ng-template #elseBlock>
+    <mat-icon
+      class="dark-mode-icon" 
+      (click)="toggleDarkMode()"
+      matTooltip="Switch to dark mode"
+      matTooltipShowDelay="500"
+      matTooltipClass="tooltip">
+      dark_mode
+    </mat-icon>
+  </ng-template>
   
-</mat-toolbar>  
+</mat-toolbar>
+
+<!---------- HEADER SECTION ---------->
+<header
+ class="mat-app-background" 
+ [class.dark-mode]="darkModeSet"
+ [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
+ >
+  <div class="title-section container-fluid">
+    
+    <div class="title-flex-item">
+      <h1>Hi, I'm Felix</h1>
+      <h2>A software tester with frontend developer ambitions.</h2>
+
+      <h6>Create your personal recipe collection.</h6>
+    
+    </div>
+    
+    <div class="title-flex-item">
+      <img src="../../assets/images/felix-2.jpg" alt="Personal-image" class="title-image">
+    </div>
+   
+  </div>
+</header>
+

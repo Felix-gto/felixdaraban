@@ -1,0 +1,93 @@
+// Import the Angular Material Theming package
+@import "../node_modules/@angular/material/theming";
+
+// Include the mat-core() sass mixin (allow us to add a block of code)
+@include mat-core();
+
+// Custom color palettes (accent & primary)
+$my-palette-primary: (
+  50: #E4F9FB,
+  100: #BBF0F5,
+  200: #8DE7EF,
+  300: #5FDDE9,
+  400: #3DD5E4,
+  500: #1BCEDF,
+  600: #18C9DB,
+  700: #14C2D7,
+  800: #10BCD2,
+  900: #08B0CA,
+  A100: #F4FDFF,
+  A200: #C1F6FF,
+  A400: #8EEEFF,
+  A700: #74EAFF,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: white,
+    A700: white,
+  ),
+);
+
+$my-palette-accent: (
+  50: #EBE5EF,
+  100: #CEBDD7,
+  200: #AD92BD,
+  300: #8C66A2,
+  400: #74458E,
+  500: #5B247A,
+  600: #532072,
+  700: #491B67,
+  800: #40165D,
+  900: #2F0D4A,
+  A100: #C282FF,
+  A200: #A94FFF,
+  A400: #901CFF,
+  A700: #8303FF,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+
+// Define the custom palette ($variables) - using the mat-palette() function - can define hues: the "default" hue, a "lighter" hue, a "darker" hue, and a "text" hue.
+// The "warn" palette is optional and defaults to red if not specified.
+$my-primary: mat-palette($my-palette-primary, 200, 100, 500);
+$my-accent: mat-palette($my-palette-accent, 300, 100, 500);
+$my-warn: mat-palette($mat-red, A400);
+
+// Define your theme appearance (combine all the above variables and will compose your theme). Can chose dark instead of light
+$my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+
+// Include custom theme (pass it as an argument)
+@include angular-material-theme($my-theme);
+
+// Define alternative dark theme - Optional (.dark-mode custom css class. Add mat-app-background to div to change background color as well):
+.dark-mode {
+  // $my-primary: mat-palette($my-palette-primary, 100, 50, 200);
+  // $my-accent: mat-palette($my-palette-accent, 500, 100, 800);
+  // $my-warn: mat-palette($mat-red, A400);
+  $my-theme: mat-dark-theme($my-primary, $my-accent, $my-warn);
+  @include angular-material-theme($my-theme);
+}
