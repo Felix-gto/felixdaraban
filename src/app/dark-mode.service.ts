@@ -5,7 +5,7 @@ import { Subject } from "rxjs";
 export class DarkModeService {
 
   // Dark Mode Status (on/off i.e true/false) - set to false by default
-  darkModeOn: boolean = true;
+  darkModeOn: boolean = false;
 
   // Emit an Observable (Subject) that informs that the DarkMode has been changed - can subscribe to it where desired...
   darkModeStatusEmitter = new Subject<boolean>();

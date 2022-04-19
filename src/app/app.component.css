@@ -84,7 +84,7 @@ mat-toolbar {
   transform: translate3d(0, 0, 0);
 }
 
-/* Language Toggle */
+/* LANGUAGE Toggle */
 .ro-en {
   transition: transform .5s;
   cursor: pointer;
@@ -101,7 +101,7 @@ mat-toolbar {
   transform: scale(1.25);
 }
 
-/* Dark Mode Toggle */
+/* DARK MODE Toggle */
 .light-mode-icon {
   margin-left: 1rem;
   color: white;
@@ -129,17 +129,8 @@ mat-toolbar {
   font-size: 0.75rem;
 }
 
-/******************** HEADER SECTION ********************/
-header {
-  padding-top:2rem;
-  padding-left: 7.5rem;
-}
+/******************** MAIN PAGE ********************/
 
-.title-section {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-h1 {
-  margin-top: 0;
+.main-page {
+  padding:2.5rem 7.5rem;
 }

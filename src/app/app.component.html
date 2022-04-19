@@ -1,3 +1,4 @@
+<!-------------------- NAVBAR -------------------->
 <mat-toolbar class="mat-app-background" 
  [class.dark-mode]="darkModeSet"
  [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}">
@@ -7,7 +8,8 @@
 
   <span class="spacer"></span>
 
-  <a href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portfolio </a>
+  <a *ngIf="!romanianSet" href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portfolio </a>
+  <a *ngIf="romanianSet" href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portofoliu </a>
 
   <a href="" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">CV</a>
 
@@ -20,12 +22,12 @@
   <!-- RO / EN Toggle - Changes language from  based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
   <div class="ro-en">
     <div class="romanian" *ngIf="romanianSet; else ro" matTooltip="Switch to English" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
-      <img class="flag" src="../../assets/images/romanian-flag.png" alt="romanian-flag">
+      <img class="flag" src="../../assets/images/english-flag.png" alt="romanian-flag">
     </div>
 
     <ng-template #ro>
       <div class="english" matTooltip="Switch to Romanian" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
-        <img class="flag" src="../../assets/images/english-flag.png" alt="english-flag">
+        <img class="flag" src="../../assets/images/romanian-flag.png" alt="english-flag">
       </div>      
     </ng-template>    
   </div>
@@ -54,26 +56,29 @@
   
 </mat-toolbar>
 
-<!---------- HEADER SECTION ---------->
-<header
- class="mat-app-background" 
- [class.dark-mode]="darkModeSet"
- [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
- >
-  <div class="title-section container-fluid">
-    
-    <div class="title-flex-item">
-      <h1>Hi, I'm Felix</h1>
-      <h2>A software tester with frontend developer ambitions.</h2>
+<!-------------------- MAIN PAGE -------------------->
+<div 
+  class="main-page mat-app-background" 
+  [class.dark-mode]="darkModeSet" 
+  [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
+>
 
-      <h6>Create your personal recipe collection.</h6>
+  <div class="title-section container-fluid">
+      
+    <div class="title-flex-item">
+      <h1 *ngIf="romanianSet">Salut, eu sunt Felix</h1>
+      <h1 *ngIf="!romanianSet">Hi, I'm Felix</h1>
     
     </div>
     
     <div class="title-flex-item">
       <img src="../../assets/images/felix-2.jpg" alt="Personal-image" class="title-image">
     </div>
-   
+  
   </div>
-</header>
+
+</div>
+
+  
+
 
