@@ -16,11 +16,15 @@ mat-toolbar {
   transition: opacity 0.5s;
 }
 
-/* Navbar Links & Button - Size & Positioning  */
-.navbar-links, .navbar-button {
+/* Navbar Links (Portfolio & CV) - Size & Positioning  */
+.navbar-links {
   margin: auto 3.5rem;
   font-size: 1.4rem;
   font-weight: 425;
+}
+
+.cv {
+  margin-right: 7rem;
 }
 
 .navbar-links:hover, .navbar-brand:hover {
@@ -28,7 +32,8 @@ mat-toolbar {
 }
 
 .navbar-button {
-  margin-right: 7.5rem;
+  font-size: 1.4rem;
+  font-weight: 425;
   padding: 0.85rem 1.75rem;
   background-color: black;
   color: white;
@@ -42,7 +47,6 @@ mat-toolbar {
 }
 
 .navbar-button-dark {
-  margin-right: 7.5rem;
   padding: 0.85rem 1.75rem;
   background-color: white;
   color: black;
@@ -51,7 +55,7 @@ mat-toolbar {
 }
 
 .navbar-button-dark:hover {
-  background-color: black;
+  background-color: #532072;
   color: white;
 }
 
@@ -89,11 +93,11 @@ mat-toolbar {
   transition: transform .5s;
   cursor: pointer;
   margin-right: 0.5rem;
+  margin-left: 7.5rem;
 }
 
 .flag {
-  width: 22px;
-  margin-top: 7.5px;
+  margin-top: 8.5px;
 }
 
 
@@ -103,6 +107,9 @@ mat-toolbar {
 
 /* DARK MODE Toggle */
 .light-mode-icon {
+  width: 29px;
+  height: 29px;
+  font-size: 29px;
   margin-left: 1rem;
   color: white;
   text-shadow: 0.25px 0.25px yellow;
@@ -115,8 +122,11 @@ mat-toolbar {
 }
 
 .dark-mode-icon {
+  width: 31px;
+  height: 31px;
+  font-size: 31px;
   margin-left: 1rem;
-  text-shadow: 0.5px 0.5px #08B0CA;
+  text-shadow: 1px 1px #08B0CA;
   transition: transform .5s;
 }
 

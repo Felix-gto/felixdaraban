@@ -1,0 +1,32 @@
+.home-page {
+font-family: 'Satoshi', sans-serif;
+}
+
+/********** HEADER **********/
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Intro */
+.header-intro {
+    margin-left: 7.5rem;
+}
+
+h1 {    
+    font-weight: 500;
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/* Image */
+.header-image {
+    margin-right: 7.5rem;
+    margin-left: 5rem;
+}

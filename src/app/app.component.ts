@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 
 // Dark Mode Service
 import { DarkModeService } from './dark-mode.service';
+
+// Language Service
 import { LanguageService } from './language.service';
 
 @Component({
@@ -23,8 +25,6 @@ export class AppComponent implements OnInit {
 
   // romanianSet property = romanianOn property from the Language Service (true or false)
   romanianSet = this.languageService.romanianOn;
-  
-  title = 'felixdaraban';
 
   // Store the DarkModeService subscription
   private darkModeSubscription: Subscription;

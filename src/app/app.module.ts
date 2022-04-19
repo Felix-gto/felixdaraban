@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -17,12 +18,27 @@ import { DarkModeService } from './dark-mode.service';
 // Language Service
 import { LanguageService } from './language.service';
 
+// Components
+import { HomeComponent } from './home/home.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { CvComponent } from './cv/cv.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+// 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PortfolioComponent,
+    CvComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
 
     // Angular Material Modules - If you want to use a new Angular Material Component - you need to add the corresponding module
     BrowserAnimationsModule,
