@@ -34,11 +34,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
+    // Subscribe to the DarkModeService Subject (darkModeStatusEmitter - observable) and listen to changes in the darkModeOn status... (changes on click emitted in the Navbar)
+    this.darkModeSubscription = this.darkModeService.darkModeStatusEmitter.subscribe(darkModeStatus => {
+      this.darkModeSet = darkModeStatus;
+    })
+
     // Subscribe to the LanguageService Subject (languageEmitter - observable) and listen to changes in the language (Romanian or English)... (changes on click emitted in the Navbar)
     this.languageSubscription = this.languageService.languageEmitter.subscribe(romanianOnStatus => {
       this.romanianSet = romanianOnStatus;
     })
-    
+
   }
 
 }

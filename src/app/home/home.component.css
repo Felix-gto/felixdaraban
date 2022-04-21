@@ -19,9 +19,11 @@ h1 {
     font-size: 3.75rem;
 }
 
-h2 {
-    font-size: 2rem;
+h3 {
+    font-size: 1.5rem;
     font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.65;
 }
 
 
@@ -29,4 +31,25 @@ h2 {
 .header-image {
     margin-right: 7.5rem;
     margin-left: 5rem;
+}
+
+/***** BUTTONS *****/
+.header-buttons {
+    margin-top: 3.75rem;
+}
+
+.header-button {
+    height: 3.5rem;
+    width: 10rem;
+    font-size: 1rem;
+    transition: transform .5s, background-color .5s, color .5s;
+}
+
+.header-button:hover {
+    transform: scale(1.05);
+}
+
+/* Contact me */
+.contact-me {
+    margin-left: 1.5rem;
 }

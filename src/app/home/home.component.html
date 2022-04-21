@@ -1,15 +1,36 @@
+<!-- spell-checker:disable -->
+
 <div class="home-page">
 
+    <!-------------------- HEADER -------------------->
     <div class="header-section container-fluid">
 
         <div class="header-intro">
-            <!-- Title -->
-            <h1 *ngIf="romanianSet">Salut, sunt Felix.</h1>
-            <h1 *ngIf="!romanianSet">Hi, I'm Felix.</h1>
+
+            <!-- Intro H1-->
+            <h1 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Salut, sunt Felix.</h1>
+            <h1 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Hi, I'm Felix.</h1>
     
-            <!-- Description -->
-            <h2 *ngIf="romanianSet">Sunt software tester, cu o pasiune tot mai mare pentru frontend development.</h2>
-            <h2 *ngIf="!romanianSet">I am a software tester, with a growing passion for frontend development.</h2>
+            <h1 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Te pot ajuta să creezi aplicații web de calitate.</h1>
+            <h1 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I can help you develop high quality web applications.</h1>
+
+            <!-- Paragraphs -->
+
+            <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">O aplicație poate fi atât eficientă cât și plăcută și intuitivă. Prin explorarea și studierea funcționalităților aplicației, pot ajuta developerii să livreze software de calitate ce depășește asteptările.</h3>
+
+            <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Web applications can be both efficient and user-friendly. By exploring and studying the application feature by feature, I can help developers deliver high quality software that exceeds expectations.</h3>
+
+            <!-- Buttons: About & Contact -->
+            <div class="header-buttons">
+                <!-- About me -->
+                <button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button>
+                <button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button>
+
+                <!-- Contact me -->
+                <button *ngIf="romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button routerLink="/contact">Contactează-mă</button>
+                <button *ngIf="!romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button routerLink="/contact">Contact me</button>    
+            </div>                   
+
         </div>
             
     
@@ -19,6 +40,8 @@
         </div>       
     
     </div>
+
+    <!-------------------- ABOUT ME -------------------->
 
 </div>
 
