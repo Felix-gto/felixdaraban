@@ -23,7 +23,7 @@
             <div class="header-buttons">
                 <!-- About me -->
                 <a href="#about-me"><button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button></a>
-                <button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button>
+                <a href="#about-me"><button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button></a>
 
                 <!-- Contact me -->
                 <button *ngIf="romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button routerLink="/contact">Contactează-mă</button>
