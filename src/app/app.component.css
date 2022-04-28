@@ -27,7 +27,8 @@ mat-toolbar {
   margin-right: 7rem;
 }
 
-.navbar-links:hover, .navbar-brand:hover {
+.navbar-links:hover,
+.navbar-brand:hover {
   opacity: 0.65;
 }
 
@@ -38,7 +39,7 @@ mat-toolbar {
   background-color: black;
   color: white;
   border-radius: 0;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .navbar-button:hover {
@@ -51,7 +52,7 @@ mat-toolbar {
   background-color: white;
   color: black;
   border-radius: 0;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .navbar-button-dark:hover {
@@ -65,18 +66,18 @@ mat-toolbar {
   position: relative;
   text-decoration: none;
   color: black;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .navbar-links::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.1em;
-	background-color: #8303FF;
-	transition: transform 300ms;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #8303ff;
+  transition: transform 300ms;
 }
 
 .navbar-links::after {
@@ -84,13 +85,13 @@ mat-toolbar {
 }
 
 .navbar-links:hover::after,
-.navbar-links:focus::after{
+.navbar-links:focus::after {
   transform: translate3d(0, 0, 0);
 }
 
 /* LANGUAGE Toggle */
 .ro-en {
-  transition: transform .5s;
+  transition: transform 0.5s;
   cursor: pointer;
   margin-right: 0.5rem;
   margin-left: 7.5rem;
@@ -99,7 +100,6 @@ mat-toolbar {
 .flag {
   margin-top: 8.5px;
 }
-
 
 .ro-en:hover {
   transform: scale(1.25);
@@ -113,7 +113,7 @@ mat-toolbar {
   margin-left: 1rem;
   color: white;
   text-shadow: 0.25px 0.25px yellow;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .light-mode-icon:hover {
@@ -126,8 +126,8 @@ mat-toolbar {
   height: 31px;
   font-size: 31px;
   margin-left: 1rem;
-  text-shadow: 1px 1px #08B0CA;
-  transition: transform .5s;
+  text-shadow: 1px 1px #08b0ca;
+  transition: transform 0.5s;
 }
 
 .dark-mode-icon:hover {
@@ -142,5 +142,75 @@ mat-toolbar {
 /******************** MAIN PAGE ********************/
 
 .main-page {
-  padding:2.5rem 7.5rem;
+  padding: 2.5rem 7.5rem;
+}
+
+/******************** FOOTER ********************/
+
+.footer-contact, .footer-copyright {
+  background-color: #0d0d0d;
+  padding: 4rem 7.5rem;
+}
+
+.footer-text {
+  color: white;
+}
+
+/* Top Footer - Contact*/
+.footer-contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-details img {
+  width: 24px;
+  position: relative;
+  top: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Social Media icons */
+.social-icon{
+transition: transform 0.5s;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+.facebook-icon {
+  margin-right: 1rem;
+}
+
+/* hr */
+.hr-container {
+  background-color: #0d0d0d;
+  padding: 0.25rem 0;
+}
+
+.hr {
+  margin: 0 7.5rem;
+  background-color: #0d0d0d;
+  height: 10px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: white;
+  margin: 0;
+}
+
+/* Bottom Footer - Copyright*/
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.75rem;
 }

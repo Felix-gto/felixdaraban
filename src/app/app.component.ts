@@ -32,6 +32,9 @@ export class AppComponent implements OnInit {
   // Store the Language Service subscription
   private languageSubscription: Subscription;
 
+  // Current year - for the Footer Copyright section
+  currentYear: number = new Date().getFullYear();
+
   ngOnInit() {
 
     // Subscribe to the DarkModeService Subject (darkModeStatusEmitter - observable) and listen to changes in the darkModeOn status... (changes on click emitted in the Navbar)

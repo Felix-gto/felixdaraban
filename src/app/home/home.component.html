@@ -1,5 +1,4 @@
 <!-- spell-checker:disable -->
-
 <div class="home-page">
 
     <!-------------------- HEADER -------------------->
@@ -23,7 +22,7 @@
             <!-- Buttons: About & Contact -->
             <div class="header-buttons">
                 <!-- About me -->
-                <button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button>
+                <a href="#about-me"><button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button></a>
                 <button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button>
 
                 <!-- Contact me -->
@@ -42,6 +41,244 @@
     </div>
 
     <!-------------------- ABOUT ME -------------------->
+    <div id="about-me" class="about-section container-fluid">
+
+        <!-- Image -->
+        <div class="about-image">        
+            <img src="../../assets/images/felix-2.jpg" alt="Personal-image2" class="about-me-image">
+        </div>   
+
+        <div class="about-text">
+
+            <!-- Intro H2-->
+            <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Despre mine</h2>
+            <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">About me</h2>
+
+            <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"><strong>QA tester cu o pasiune pentru frontend development.</strong></h3>
+            <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"><strong>QA tester with a passion for frontend development.</strong></h3>
+    
+            <!-- Paragraphs RO -->
+            <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Am descoperit IT-ul în iunie 2021 când mi s-a propus poziția de software QA tester.</h3>
+            <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Am profitat de oportunitate și am decis să invaț mai multe, începând cu HTML, CSS, JavaScript și continuând cu Angular ca și framework de frontend. Cu cât descopeream mai multe lucuri noi, cu atât deveneam mai curios și determinat să evoluez.</h3>
+            <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Îmi place să explorez o aplicație, să-i studiez funcționalitățile descoperind unde sunt probleme, cum poate fi îmbunătățită și să lucrez împreună cu developerii pe întreg parcursul dezvoltării aplicației.</h3>
+            
+            <!-- Paragraphs EN -->
+            <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I discovered IT in June 2021 when I was given the position of software QA tester.</h3>
+            <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> I took the opportunity to go deeper and learn the basics of programming, started studying HTML, CSS and JavaScript and continued with the frontend framework Angular. The more I learned the more curious and excited I became, determined to evolve.</h3>
+            <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I love exploring an application, studying it's features, discovering how it can help and how can it be improved, working together with developers to help them throughout the software development lifecycle.</h3>            
+
+        </div>    
+    </div>
+
+    <!-------------------- EXPERTISE -------------------->
+    <div class="expertise-section container-fluid">
+    
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Expertiză</h2>
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Expertise</h2>
+
+        <!-- Row 1: RO -->
+        <div class="expertise-row">            
+            <div class="expertise">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title">Testare Manuală</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+            <div class="expertise">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Testare automată</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+        </div>
+
+        <!-- Row 2: RO -->
+        <div class="expertise-row">            
+            <div class="expertise">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title">Planuri și strategii de testare</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="romanianSet">
+            </div>
+            <div class="expertise">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Raportare</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="romanianSet">
+            </div>
+        </div>   
+
+        <!-- Row 1: EN -->
+        <div class="expertise-row">            
+            <div class="expertise">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title">Manual Testing</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+            <div class="expertise">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Automation Testing</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+        </div>
+
+        <!-- Row 2: EN -->
+        <div class="expertise-row">            
+            <div class="expertise">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title">Test Cases & Test plans</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="!romanianSet">
+            </div>
+            <div class="expertise">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Reporting</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="!romanianSet">
+            </div>
+        </div>  
+
+    </div>
+
+    <!-------------------- TECHNICAL SKILLS -------------------->
+    <div class="skills-section container-fluid">
+    
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Cunoștințe Tehnice</h2>
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Technical Skills</h2>
+
+        <!-- Row 1: RO -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title"><span class="keyboard-symbol">{{"{}"}}</span>HTML, CSS & JavaScript</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+            </div>
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/angular-icon.png" alt="angular-icon"></span>Angular</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+            </div>
+        </div>
+
+        <!-- Row 2: RO -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title"><span><img src="../../assets/images/git-icon.png" alt="git-icon"></span>Git, Github și Control al Versiunilor</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+            </div>
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/cypress-icon.png" alt="vscode-icon"></span>Cypress</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+            </div>
+        </div>
+
+        <!-- Row 3: RO -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/vscode-icon.png" alt="vscode-icon"></span>VSCode</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <hr *ngIf="romanianSet">
+            </div>
+            <div class="skills">
+                <hr *ngIf="romanianSet">
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/figma-icon.png" alt="figma-icon"></span>Figma</h3>
+                <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <hr *ngIf="romanianSet">
+            </div>
+        </div>   
+
+        <!-- Row 1: EN -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title"><span class="keyboard-symbol">{{"{}"}}</span>HTML, CSS & JavaScript</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/angular-icon.png" alt="vscode-icon"></span>Angular</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+        </div>
+
+        <!-- Row 2: EN -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title"><span><img src="../../assets/images/git-icon.png" alt="git-icon"></span>Git, Github and Version Control</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/cypress-icon.png" alt="cypress-icon"></span>Cypress</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+            </div>
+        </div>  
+
+        <!-- Row 3: EN -->
+        <div class="skills-row">            
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"  class="h3-title"><span><img src="../../assets/images/vscode-icon.png" alt="vscode-icon"></span>VSCode</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="!romanianSet">
+            </div>
+            <div class="skills">
+                <hr *ngIf="!romanianSet">
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/figma-icon.png" alt="figma-icon"></span>Figma</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a mauris velit.</h3>
+                <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Praesent ipsum magna, lacinia condimentum elementum id, commodo aliquet orci.</h3>
+                <hr *ngIf="!romanianSet">
+            </div>
+        </div>
+    </div>
+
+    <!-------------------- ME AND MY WORK -------------------->
+    <div class="work-section container-fluid">
+
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Mai multe informații</h2>
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">More information</h2> 
+        
+        <h3 [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-cv"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/cv">CV</a></h3>  
+
+        <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portofoliu</a></h3>  
+
+        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a  [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portfolio</a></h3> 
+    </div>
+
+    <!-------------------- CALL TO ACTION -> CONTACT -------------------->
+    <div class="contact-section container-fluid">
+
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Spune-mi despre proiectul tău!</h2>
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Tell me about your project!</h2> 
+
+        <!-- Contact-me-now -->
+        <a routerLink="/contact">
+
+            <button *ngIf="romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
+            Contactează-mă acum >>
+            </button>
+
+            <button *ngIf="!romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
+                Contact me now >>
+            </button>
+        </a>
+        
+    </div>
 
 </div>
 

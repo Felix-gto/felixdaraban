@@ -3,3 +3,29 @@
 html, body { height: 100%; }
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* TEXT */
+
+h1 {    
+    font-weight: 500;
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    opacity: 0.65;
+}
+
+.h3-title {
+    color: black;
+    font-weight: 500;
+    font-size: 1.75rem;
+    opacity: 1;
+}

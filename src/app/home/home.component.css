@@ -1,55 +1,199 @@
 .home-page {
-font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
+}
+
+/********** SECTIONS - COMMON SETTINGS **********/
+.header-section,
+.about-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.keyboard-symbol {
+  color: #08b0ca;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
 }
 
 /********** HEADER **********/
 
-.header-section {
-    display: flex;
-    justify-content: space-between;
-}
-
 /* Intro */
 .header-intro {
-    margin-left: 7.5rem;
+  margin-left: 7.5rem;
 }
-
-h1 {    
-    font-weight: 500;
-    font-size: 3.75rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.5;
-    opacity: 0.65;
-}
-
 
 /* Image */
 .header-image {
-    margin-right: 7.5rem;
-    margin-left: 5rem;
+  margin-right: 7.5rem;
+  margin-left: 5rem;
 }
 
 /***** BUTTONS *****/
 .header-buttons {
-    margin-top: 3.75rem;
+  margin-top: 3.75rem;
 }
 
 .header-button {
-    height: 3.5rem;
-    width: 10rem;
-    font-size: 1rem;
-    transition: transform .5s, background-color .5s, color .5s;
+  height: 3.5rem;
+  width: 10rem;
+  font-size: 1rem;
+  transition: transform 0.5s, background-color 0.5s, color 0.5s;
 }
 
 .header-button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Contact me */
 .contact-me {
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+/********** ABOUT ME **********/
+.about-section {
+  padding: 10rem 7.5rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.about-image img {
+  width: 325px;
+}
+
+/* Text */
+.about-text {
+  margin-left: 5rem;
+}
+
+/********** EXPERTISE **********/
+.expertise-section {
+  padding: 0 7.5rem 10rem;
+}
+
+.expertise-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expertise {
+  flex-basis: 45%;
+}
+
+/********** TECHNICAL SKILLS **********/
+.skills-section {
+  padding: 0 7.5rem 10rem;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills {
+  flex-basis: 45%;
+}
+
+.skills-section img {
+  width: 40px;
+  position: relative;
+  top: 0.65rem;
+  margin-right: 0.75rem;
+}
+
+/********** ME & MY WORK **********/
+.work-section {
+  padding: 0 7.5rem 10rem;
+}
+
+.work-section {
+  display: inline-block;
+}
+
+.work-section a {
+  text-decoration: none;
+  position: relative;
+  top: 0.25rem;
+}
+
+.work-section .keyboard-symbol {
+  position: relative;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+
+/* Underlined-links */
+.underlined-link {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.5s;
+}
+
+.underlined-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 0.1em;
+  background-color: #08b0ca;
+  transition: transform 300ms;
+}
+
+.underlined-link::after {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.underlined-link:hover::after,
+.underlined-link:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.underlined-cv::after {
+  width: 25%;
+}
+
+.underlined-portfolio::after {
+  width: 47.5%;
+}
+
+
+/********** CALL TO ACTION -> CONTACT **********/
+.contact-section {
+  padding: 0 7.5rem 10rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.navbar-button {
+  font-size: 1.4rem;
+  font-weight: 425;
+  padding: 1.25rem 1.75rem;
+  position: relative;
+  left: 5rem;
+  bottom: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0;
+  transition: background-color 0.5s;
+}
+
+.navbar-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.navbar-button-dark {
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s;
+}
+
+.navbar-button-dark:hover {
+  background-color: #532072;
+  color: white;
 }
