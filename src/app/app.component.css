@@ -5,6 +5,12 @@ mat-toolbar {
   background-color: transparent;
 }
 
+/* Active Navbar Link */
+.active-link {
+  color: #A94FFF !important;
+}
+
+
 .spacer {
   flex: 1 1 auto;
 }

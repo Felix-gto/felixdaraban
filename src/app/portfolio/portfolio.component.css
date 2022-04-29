@@ -1,0 +1,101 @@
+.portfolio {
+  font-family: "Satoshi", sans-serif;
+  padding: 2.5rem 5rem;
+}
+
+/* Remove un`rline from <a> */
+a {
+    text-decoration: none;
+}
+
+
+/********** PROJECT CARD **********/
+
+/* Entire div */
+.project {
+    margin-top: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    display: flex;
+    height: 250px;
+    width: 650px;
+    margin: 5rem 0;    
+}
+
+.card1 {
+    background: #8C66A2;
+}
+
+.card2 {
+    background: #3DD5E4;
+}
+
+/* Image */
+.card-image {
+    width: 225px;
+    height: 325px;
+    position: relative;
+    left: 2rem;
+    bottom: 5rem;
+    border-radius: 20px !important;
+    cursor: pointer;
+    transform: rotate(-10deg);
+    transition: transform .5s, scale .5s;
+}
+
+.card-image:hover {
+    transform: rotate(0deg);
+    transform: scale(1.1);   
+}
+
+/* Content */
+.card-content {
+    margin-left: 6rem;
+}
+
+.card-title {
+    transition: transform .5s, opacity .5s;
+    margin: 1rem 0;
+}
+
+.card-title:hover {
+    opacity: 0.85;
+    transform: scale(1.015);
+}
+
+.card-subtitle {
+    margin: 1rem 0;
+}
+
+li h3 {
+    font-size: 1.25rem;
+}
+
+/* Buttons */
+.card-button {
+    width: 10rem;
+    height: 3.25rem;
+    margin-left: 1rem !important;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.card-button span {
+    position: relative;
+    top: 0.3rem;
+    left: 0.5rem;
+    transition: left .3s;
+}
+
+.card-button:hover span {
+    left: 1rem;
+}
+
+.github-button img {
+    width: 28px;
+}

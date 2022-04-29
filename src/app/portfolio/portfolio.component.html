@@ -1,1 +1,111 @@
-<p>portfolio works!</p>
+<!-- spell-checker:disable -->
+
+<div class="portfolio">
+
+    <!-- INTRO -->
+    <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Portofoliu de proiecte</h2>
+    <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Project Portfolio</h2>
+
+    <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Site-ul pe care te afli acum e construit de mine, de la design la execuție și deployment. Am folosit Angular ca și framework.</h3>
+    <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Fiecare proiect sau exercițiu practic finalizat a contribuit la evoluția mea. Iată câteva exemple:</h3>
+
+    <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I've built this website from design to development and deployment, using Angular as a frontend framework.</h3>
+    <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Each project or practical assignment has contributed to my evolution. Below are some examples:</h3>
+
+    <!-- PROJECTS -->
+    <div class="projects">
+
+        <div class="project">
+
+            <!-- CARD -->
+            <mat-card class="card card1 mat-elevation-z7">
+
+                <!-- Image -->
+                <a href="https://felix-gto.github.io/diceroll/" target="_blank"> 	
+                    <img class="card-image" mat-card-image src="../../assets/images/portfolio/diceroll.jpg" alt="diceroll-website">
+                </a>
+
+                <mat-card-content class="card-content">  
+                    <!-- Title -->
+                    <mat-card-title>
+                        <a href="https://felix-gto.github.io/diceroll/" target="_blank">                
+                            <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title card-title">Zaruri</h3>
+                            <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title card-title">Diceroll</h3>   
+                        </a>
+                    </mat-card-title>        
+        
+                    <!-- Description -->
+                    <mat-card-subtitle>
+                        <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="card-subtitle">Aruncă cu zarul.</h3>
+                        <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="card-subtitle">Simply roll the dice.</h3>
+                        <ul>
+                            <li>
+                                <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Primul meu exercițiu de JavaScript</h3>
+                                <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">My first JavaScript assignment</h3>
+                            </li>
+                        </ul>
+                    </mat-card-subtitle>
+
+                    <!-- Buttons -->
+                    <mat-card-actions>
+                        <a href="https://github.com/Felix-gto/diceroll" target="_blank">
+                            <button *ngIf="darkModeSet" class="mat-elevation-z4 card-button github-button" mat-raised-button>Github<span><img src="../../assets/images/github-icon-white.png" alt="github-icon"></span></button>
+                            <button *ngIf="!darkModeSet" class="mat-elevation-z4 card-button github-button" mat-raised-button>Github<span><img src="../../assets/images/github-icon-black.png" alt="github-icon"></span></button> 
+                        </a>
+                        <a href="https://felix-gto.github.io/diceroll/" target="_blank">
+                            <button class="mat-elevation-z4 card-button website-button" mat-raised-button>Website <span><mat-icon>arrow_forward</mat-icon></span></button>  
+                        </a>
+                    </mat-card-actions>
+        
+                </mat-card-content>
+            </mat-card>
+
+            <!-- CARD 2 -->
+            <mat-card class="card card2 mat-elevation-z7">
+
+                <!-- Image -->
+                <a href="https://felix-gto.github.io/diceroll/" target="_blank"> 	
+                    <img class="card-image" mat-card-image src="../../assets/images/portfolio/drum-kit.jpg" alt="diceroll-website">
+                </a>
+
+                <mat-card-content class="card-content">  
+                    <!-- Title -->
+                    <mat-card-title>
+                        <a href="https://felix-gto.github.io/diceroll/" target="_blank">                
+                            <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title card-title">Tobe</h3>
+                            <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title card-title">Drum kit</h3>   
+                        </a>
+                    </mat-card-title>        
+        
+                    <!-- Description -->
+                    <mat-card-subtitle>
+                        <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="card-subtitle">Cântă la tobe.</h3>
+                        <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="card-subtitle">Play some drums.</h3>
+                        <ul>
+                            <li>
+                                <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Construit folosind JavaScript</h3>
+                                <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Built using JavaScript</h3>
+                            </li>
+                        </ul>
+                    </mat-card-subtitle>
+
+                    <!-- Buttons -->
+                    <mat-card-actions>
+                        <a href="https://github.com/Felix-gto/drums" target="_blank">
+                            <button *ngIf="darkModeSet" class="mat-elevation-z4 card-button github-button" mat-raised-button>Github<span><img src="../../assets/images/github-icon-white.png" alt="github-icon"></span></button>
+                            <button *ngIf="!darkModeSet" class="mat-elevation-z4 card-button github-button" mat-raised-button>Github<span><img src="../../assets/images/github-icon-black.png" alt="github-icon"></span></button> 
+                        </a>
+                        <a href="https://felix-gto.github.io/drums/" target="_blank">
+                            <button class="mat-elevation-z4 card-button website-button" mat-raised-button>Website <span><mat-icon>arrow_forward</mat-icon></span></button>  
+                        </a>
+                    </mat-card-actions>
+        
+                </mat-card-content>
+            </mat-card>
+            
+        </div>
+
+    </div>
+
+</div>
+
