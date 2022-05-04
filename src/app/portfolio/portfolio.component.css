@@ -1,25 +1,39 @@
 .portfolio {
   font-family: "Satoshi", sans-serif;
-  padding: 2.5rem 5rem;
+  padding: 1rem 5rem 2.5rem;
 }
 
-/* Remove un`rline from <a> */
+/* Remove underline from <a> */
 a {
     text-decoration: none;
+}
+
+/* Tooltip */
+.info-button {
+    opacity: 0.85;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 0.35rem;
+}
+
+::ng-deep .tooltip-text {
+    font-size: 0.85rem;
 }
 
 
 /********** PROJECT CARD **********/
 
 /* Entire div */
-.project {
+.projects {
     margin-top: 7.5rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* Card */
+/***** CARD *****/
 .card {
     display: flex;
     height: 250px;
@@ -27,12 +41,25 @@ a {
     margin: 5rem 0;    
 }
 
+/* Colors */
 .card1 {
     background: #8C66A2;
 }
 
 .card2 {
     background: #3DD5E4;
+}
+
+.card3 {
+    background: #3DD5E4;
+}
+
+.card4 {
+    background: #8C66A2;
+}
+
+.card5 {
+    background: #8C66A2;
 }
 
 /* Image */
