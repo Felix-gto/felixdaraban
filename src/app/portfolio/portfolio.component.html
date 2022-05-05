@@ -4,6 +4,7 @@
 
     <!-- INTRO -->
     
+    <!-- Title -->
     <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
         Portofoliu de proiecte
         <span>
@@ -22,10 +23,17 @@
         </span>
     </h2>  
 
-    <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Site-ul pe care te afli acum e construit de mine, de la design la execuție și deployment. Am folosit Angular ca și framework.</h3>
+    <!-- Description -->
+    <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
+        Site-ul pe care te afli acum e construit de mine, de la design la execuție și deployment. Am folosit Angular ca și framework (vezi <a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://github.com/Felix-gto/felixdaraban" target="_blank"><strong>Github</strong></a>).
+    </h3>
+
     <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Fiecare proiect sau exercițiu practic finalizat a contribuit la evoluția mea. Iată câteva exemple:</h3>
 
-    <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I've built this website from design to development and deployment, using Angular as a frontend framework.</h3>
+    <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
+        I've built this website from design to development and deployment, using Angular as a frontend framework  (see <a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://github.com/Felix-gto/felixdaraban" target="_blank"><strong>Github</strong></a>).
+    </h3>
+
     <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Each project or practical assignment has contributed to my evolution. Below are some examples:</h3>
 
     <!-- PROJECTS -->
@@ -183,8 +191,8 @@
                     <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="card-subtitle">Built at my wife's request 🙂.</h3>
                     <ul>
                         <li>
-                            <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Am folosit: Node.js, Express.js, <a href="https://ejs.co/" target="_blank">EJS</a></h3>
-                            <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I used: Node.js, Express.js, <a href="https://ejs.co/" target="_blank">EJS</a></h3>
+                            <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Am folosit: Node.js, Express.js, EJS</h3>
+                            <h3 *ngIf="!romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I used: Node.js, Express.js, EJS</h3>
                         </li>
                     </ul>
                 </mat-card-subtitle>
@@ -247,6 +255,83 @@
         </mat-card>
 
     </div>
+
+    <!-- LEARNING -->
+    <div class="my-learning">
+
+        <!-- Title -->
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
+            Materiale studiate
+        </h2>    
+
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
+            My learning
+        </h2>
+
+        <!-- Description -->
+        <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Încerc sa învăț cât mai structurat și cu sens, echilibrând ce mă pasionează cu ce e util pentru compania cu care colarborez.</h3>
+        <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Procesul de învățare este unul continuu. Mai jos găsești o parte din ce am parcurs, dincolo de articole si video-uri pe Youtube:</h3>
+
+        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I try to learn in a structured way and with purpose, balancing what I'm passionate about with what is useful for the company I work with.</h3>
+        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">My learning journey is neverending, and I like that. Below are a few things I've studied, besides articles and Youtube videos:</h3>
+
+        <!-- Courses -->
+        <div class="courses">
+            <ul>
+                <!-- Angela Yu - The Complete Web Development Bootcamp -->
+                <li>
+                    <div class="course">
+                        <div class="course-title">
+                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">The complete 2022 Web Development Bootcamp - By dr. Angela Yu</a></h4>
+                        </div>
+                        <div class="progress-bar">
+                            <h4>70%</h4>
+                        </div>
+                    </div>                    
+                </li>
+
+                <!-- Angular - The Complete Guide -->
+                <li>
+                    <div class="course">
+                        <div class="course-title">
+                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blank">Angular - The Complete Guide - By Maximilian Schwarzmüller</a></h4>
+                        </div>
+                        <div class="progress-bar">
+                            <h4>70%</h4>
+                        </div>
+                    </div>                    
+                </li>
+
+                <!-- Angular Testing Masterclass -->
+                <li>
+                    <div class="course">
+                        <div class="course-title">
+                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/angular-testing-course/" target="_blank">Angular Testing Masterclass - By Angular University</a></h4>
+                        </div>
+                        <div class="progress-bar">
+                            <h4>100%</h4>
+                        </div>
+                    </div>                    
+                </li>
+
+                <!-- Angular Material In Depth -->
+                <li>
+                    <div class="course">
+                        <div class="course-title">
+                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/angular-material-course/" target="_blank">Angular Material In Depth - By Angular University</a></h4>
+                        </div>
+                        <div class="progress-bar">
+                            <h4>30%</h4>
+                        </div>
+                    </div>                    
+                </li>
+            </ul>
+            
+        </div>
+
+    </div>
+
+    
 
 </div>
 

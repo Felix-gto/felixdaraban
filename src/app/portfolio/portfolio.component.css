@@ -23,7 +23,7 @@ a {
 }
 
 
-/********** PROJECT CARD **********/
+/********** PROJECT CARDS **********/
 
 /* Entire div */
 .projects {
@@ -125,4 +125,22 @@ li h3 {
 
 .github-button img {
     width: 28px;
+}
+
+/********** MY LEARNING **********/
+.my-learning h4 {
+    opacity: 0.65;
+    font-size: 1.25rem;
+}
+
+.course {
+    display:flex;
+}
+
+.course-title {
+    flex-basis: 50%;
+}
+
+.progress-bar {
+    flex-basis: 50%;
 }

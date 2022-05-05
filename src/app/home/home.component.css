@@ -38,17 +38,24 @@
   height: 4rem;
   width: 12rem;
   padding: 0.85rem 1.75rem;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   transition: transform 0.5s, background-color 0.5s, color 0.5s;
 }
 
 .header-button:hover {
   transform: scale(1.05);
 }
+/* About me */
+.about-me {
+  background: #EBE5EF;
+  color: black;
+}
 
 /* Contact me */
 .contact-me {
   margin-left: 1.5rem;
+  background: #EBE5EF;
+  color: black;
 }
 
 /********** ABOUT ME **********/
