@@ -5,142 +5,310 @@
 
 /* Remove underline from <a> */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Tooltip */
 .info-button {
-    opacity: 0.85;
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 1.5rem;
-    position: relative;
-    bottom: 0.35rem;
+  opacity: 0.85;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 0.35rem;
 }
 
 ::ng-deep .tooltip-text {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
-
 
 /********** PROJECT CARDS **********/
 
 /* Entire div */
 .projects {
-    margin-top: 7.5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  margin-top: 7.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /***** CARD *****/
 .card {
-    display: flex;
-    height: 250px;
-    width: 650px;
-    margin: 5rem 0;    
+  display: flex;
+  height: 250px;
+  width: 650px;
+  margin: 5rem 0;
 }
 
 /* Colors */
 .card1 {
-    background: #8C66A2;
+  background: #8c66a2;
 }
 
 .card2 {
-    background: #3DD5E4;
+  background: #3dd5e4;
 }
 
 .card3 {
-    background: #3DD5E4;
+  background: #3dd5e4;
 }
 
 .card4 {
-    background: #8C66A2;
+  background: #8c66a2;
 }
 
 .card5 {
-    background: #8C66A2;
+  background: #8c66a2;
 }
 
 /* Image */
 .card-image {
-    width: 225px;
-    height: 325px;
-    position: relative;
-    left: 2rem;
-    bottom: 5rem;
-    border-radius: 20px !important;
-    cursor: pointer;
-    transform: rotate(-10deg);
-    transition: transform .5s, scale .5s;
+  width: 225px;
+  height: 325px;
+  position: relative;
+  left: 2rem;
+  bottom: 5rem;
+  border-radius: 20px !important;
+  cursor: pointer;
+  transform: rotate(-10deg);
+  transition: transform 0.5s, scale 0.5s;
 }
 
 .card-image:hover {
-    transform: rotate(0deg);
-    transform: scale(1.1);   
+  transform: rotate(0deg);
+  transform: scale(1.1);
 }
 
 /* Content */
 .card-content {
-    margin-left: 6rem;
+  margin-left: 6rem;
 }
 
 .card-title {
-    transition: transform .5s, opacity .5s;
-    margin: 1rem 0;
+  transition: transform 0.5s, opacity 0.5s;
+  margin: 1rem 0;
 }
 
 .card-title:hover {
-    opacity: 0.85;
-    transform: scale(1.015);
+  opacity: 0.85;
+  transform: scale(1.015);
 }
 
 .card-subtitle {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 li h3 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 /* Buttons */
 .card-button {
-    width: 10rem;
-    height: 3.25rem;
-    margin-left: 1rem !important;
-    font-size: 1.15rem;
-    font-weight: 500;
+  width: 10rem;
+  height: 3.25rem;
+  margin-left: 1rem !important;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .card-button span {
-    position: relative;
-    top: 0.3rem;
-    left: 0.5rem;
-    transition: left .3s;
+  position: relative;
+  top: 0.3rem;
+  left: 0.5rem;
+  transition: left 0.3s;
 }
 
 .card-button:hover span {
-    left: 1rem;
+  left: 1rem;
 }
 
 .github-button img {
-    width: 28px;
+  width: 28px;
 }
 
 /********** MY LEARNING **********/
-.my-learning h4 {
-    opacity: 0.65;
-    font-size: 1.25rem;
+
+.courses {
+    margin: 2.5rem 0;
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .course {
-    display:flex;
+  flex-basis: 45%;
 }
 
-.course-title {
-    flex-basis: 50%;
+/* COURSE TITLE */
+.course-card-title {
+    width: 600px;
+    background: #EBE5EF;
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
 }
 
-.progress-bar {
-    flex-basis: 50%;
+.course-card-title:hover {
+    transform: scale(1.005);
+}
+
+.course-card-title:hover h4 {
+    transform: scale(1.000);
+}
+
+.my-learning h4 {
+    opacity: 0.65;
+    font-size: 1.15rem;
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}  
+
+.course-title .info-button {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    bottom: 0.25rem;
+    top: 0.05rem;
+    left: 0.35rem;
+}
+
+/* Underlined-links */
+.underlined-link {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.5s;
+}
+
+.underlined-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #08b0ca;
+  transition: transform 300ms;
+}
+
+.underlined-link::after {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.underlined-link:hover::after,
+.underlined-link:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+/* PROGRESS BAR */
+.progress-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7)
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+    
+}
+
+#number {
+    font-weight: 600;
+    opacity: 0.65;
+}
+
+/* Gradient circle */
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 15px;
+    stroke-dasharray: 312;
+    stroke-dashoffset: 312;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Circle 1 */
+.circle1 {    
+    animation: animate1 1s linear forwards;
+}
+
+@keyframes animate1 {
+    100% {
+        stroke-dashoffset: 94;
+    }
+}
+
+/* Circle 2 */
+.circle2 {    
+    animation: animate2 1s linear forwards;
+}
+
+@keyframes animate2 {
+    100% {
+        stroke-dashoffset: 156;
+    }
+}
+
+/* Circle 3 */
+.circle3 {    
+    animation: animate3 1s linear forwards;
+}
+
+@keyframes animate3 {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Circle 4 */
+.circle4 {    
+    animation: animate4 1s linear forwards;
+}
+
+@keyframes animate4 {
+    100% {
+        stroke-dashoffset: 218;
+    }
 }

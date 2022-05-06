@@ -1,6 +1,6 @@
 <!-- spell-checker:disable -->
 
-<div class="portfolio">
+<div class="portfolio container-fluid">
 
     <!-- INTRO -->
     
@@ -37,7 +37,7 @@
     <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Each project or practical assignment has contributed to my evolution. Below are some examples:</h3>
 
     <!-- PROJECTS -->
-    <div class="projects">
+    <div class="projects container-fluid">
 
         <!-- 🎲 ZARURI 🎲 -->
         <mat-card class="card card1 mat-elevation-z7">
@@ -256,8 +256,8 @@
 
     </div>
 
-    <!-- LEARNING -->
-    <div class="my-learning">
+    <!--------------- MY LEARNING --------------->
+    <div class="my-learning container-fluid">
 
         <!-- Title -->
         <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">
@@ -275,63 +275,199 @@
         <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">I try to learn in a structured way and with purpose, balancing what I'm passionate about with what is useful for the company I work with.</h3>
         <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">My learning journey is neverending, and I like that. Below are a few things I've studied, besides articles and Youtube videos:</h3>
 
-        <!-- Courses -->
-        <div class="courses">
-            <ul>
-                <!-- Angela Yu - The Complete Web Development Bootcamp -->
-                <li>
-                    <div class="course">
-                        <div class="course-title">
-                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">The complete 2022 Web Development Bootcamp - By dr. Angela Yu</a></h4>
-                        </div>
-                        <div class="progress-bar">
-                            <h4>70%</h4>
-                        </div>
-                    </div>                    
-                </li>
+        <!-- COURSES -->
+        <div class="courses container fluid">
 
-                <!-- Angular - The Complete Guide -->
-                <li>
-                    <div class="course">
-                        <div class="course-title">
-                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blank">Angular - The Complete Guide - By Maximilian Schwarzmüller</a></h4>
-                        </div>
-                        <div class="progress-bar">
-                            <h4>70%</h4>
-                        </div>
-                    </div>                    
-                </li>
-
-                <!-- Angular Testing Masterclass -->
-                <li>
-                    <div class="course">
-                        <div class="course-title">
-                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/angular-testing-course/" target="_blank">Angular Testing Masterclass - By Angular University</a></h4>
-                        </div>
-                        <div class="progress-bar">
-                            <h4>100%</h4>
-                        </div>
-                    </div>                    
-                </li>
-
-                <!-- Angular Material In Depth -->
-                <li>
-                    <div class="course">
-                        <div class="course-title">
-                            <h4><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="https://www.udemy.com/course/angular-material-course/" target="_blank">Angular Material In Depth - By Angular University</a></h4>
-                        </div>
-                        <div class="progress-bar">
-                            <h4>30%</h4>
-                        </div>
-                    </div>                    
-                </li>
-            </ul>
+            <!-- TODO: Delete buttons -->
+            <button (click)="onScrollIntoView()">Click</button>
+            <button (click)="onReset()">Reset</button>
+            <br><br>
             
+            <!-- ROW 1 -->
+            <div class="course-row">   
+
+                <!-- TODO: Set to run onScrollIntoView() method and load progress bars on mouseover ->  Need to do this on Scroll -->
+                <div class="course" (mouseover)="onScrollIntoView()">
+                    <!-- Angela Yu - The Complete Web Development Bootcamp -->
+                    <div class="course-title">
+                        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">
+                            <mat-card class="mat-elevation-z7 course-card-title">
+                                <h4 class="underlined-link">
+                                    <a [ngStyle]="{color: 'black'}" href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">The complete 2022 Web Development Bootcamp - By dr. Angela Yu</a>
+                                    <span *ngIf="romanianSet">
+                                        <mat-icon class="info-button" matTooltip="Am luat pauză la secțiunea despre React, focusul meu fiind acum să învăț Angular" matTooltipShowDelay="500" matTooltipClass="tooltip-text" matTooltipPosition="above"> 
+                                            info
+                                        </mat-icon>
+                                    </span>
+                                    <span *ngIf="!romanianSet">
+                                        <mat-icon class="info-button" matTooltip="I am pausing at the React section, my focus being now on studying Angular" matTooltipShowDelay="500" matTooltipClass="tooltip-text" matTooltipPosition="above"> 
+                                            info
+                                        </mat-icon>
+                                    </span>
+                                </h4>
+                            </mat-card>
+                        </a>
+                    </div>
+
+                    <!-- Progress Bar -->                 
+                    <div class="progress-bar">
+                        <div class="percentage">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="number">
+                                        {{counter1}}%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                   <linearGradient id="GradientColor">
+                                      <stop offset="0%" stop-color="#5B247A" />
+                                      <stop offset="100%" stop-color="#1BCEDF" />
+                                   </linearGradient>
+                                </defs>
+                                <circle [ngClass]="{circle1: counter1 > 0}" cx="80" cy="80" r="50" stroke-linecap="round" />
+                            </svg>
+                        </div>  
+                    </div>
+
+                </div> 
+                
+                <div class="course">
+                    <!-- Angular - The Complete Guide -->
+                    <div class="course-title">
+                        <a href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blank">
+                            <mat-card class="mat-elevation-z7 course-card-title">
+                                <h4 class="underlined-link">
+                                    <a [ngStyle]="{color: 'black'}" href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blank">Angular - The Complete Guide - By Maximilian Schwarzmüller</a>
+                                </h4>
+                            </mat-card>
+                        </a>
+                    </div>
+
+                    <!-- Progress Bar --> 
+                    <div class="progress-bar">
+                        <div class="percentage">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="number">
+                                        {{counter2}}%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                   <linearGradient id="GradientColor">
+                                      <stop offset="0%" stop-color="#5B247A" />
+                                      <stop offset="100%" stop-color="#1BCEDF" />
+                                   </linearGradient>
+                                </defs>
+                                <circle [ngClass]="{circle2: counter2 > 0}" cx="80" cy="80" r="50" stroke-linecap="round" />
+                            </svg>
+                        </div>  
+                    </div>
+
+                </div>                
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="course-row">   
+
+                <div class="course">
+                    <!-- Angular Testing Masterclass -->
+                    <div class="course">
+                        <div class="course-title">
+                            <a href="https://www.udemy.com/course/angular-testing-course/" target="_blank">
+                                <mat-card class="mat-elevation-z7 course-card-title">
+                                    <h4 class="underlined-link">
+                                        <a [ngStyle]="{color: 'black'}" href="https://www.udemy.com/course/angular-testing-course/" target="_blank">Angular Testing Masterclass - By Angular University</a>
+                                    </h4>
+                                </mat-card>
+                            </a>
+                        </div>
+
+                        <!-- Progress Bar --> 
+                        <div class="progress-bar">
+                            <div class="percentage">
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">
+                                            {{counter3}}%
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                       <linearGradient id="GradientColor">
+                                          <stop offset="0%" stop-color="#5B247A" />
+                                          <stop offset="100%" stop-color="#1BCEDF" />
+                                       </linearGradient>
+                                    </defs>
+                                    <circle [ngClass]="{circle3: counter3 > 0}" cx="80" cy="80" r="50" stroke-linecap="round" />
+                                </svg>
+                            </div>  
+                        </div>
+
+                    </div>
+                </div> 
+                
+                <div class="course">
+                    <!-- Angular Material In Depth -->
+                    <div class="course-title">
+                        <a href="https://www.udemy.com/course/angular-material-course/" target="_blank">
+                            <mat-card class="mat-elevation-z7 course-card-title">
+                                <h4 class="underlined-link">
+                                    <a [ngStyle]="{color: 'black'}" href="https://www.udemy.com/course/angular-material-course/" target="_blank">Angular Material In Depth - By Angular University</a>
+                                    <span *ngIf="romanianSet">
+                                        <mat-icon class="info-button" matTooltip="Folosesc această resură în funcție de ce am nevoie să folosesc în proiectele mele" matTooltipShowDelay="500" matTooltipClass="tooltip-text" matTooltipPosition="above"> 
+                                            info
+                                        </mat-icon>
+                                    </span>
+                                    <span *ngIf="!romanianSet">
+                                        <mat-icon class="info-button" matTooltip="I'm using this course as needed, depending on what I use in my projects" matTooltipShowDelay="500" matTooltipClass="tooltip-text" matTooltipPosition="above"> 
+                                            info
+                                        </mat-icon>
+                                    </span>
+                                </h4>
+                            </mat-card>
+                        </a>
+                    </div>
+
+                    <!-- Progress Bar --> 
+                    <div class="progress-bar">
+                        <div class="percentage">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="number">
+                                        {{counter4}}%
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                   <linearGradient id="GradientColor">
+                                      <stop offset="0%" stop-color="#5B247A" />
+                                      <stop offset="100%" stop-color="#1BCEDF" />
+                                   </linearGradient>
+                                </defs>
+                                <circle [ngClass]="{circle4: counter4 > 0}" cx="80" cy="80" r="50" stroke-linecap="round" />
+                            </svg>
+                        </div>  
+                    </div>
+                    
+                </div>                
+            </div>
+
         </div>
 
-    </div>
+        <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Încerc sa învăț cât mai structurat și cu sens, echilibrând ce mă pasionează cu ce e util pentru compania cu care colarborez.</h3>
+        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Procesul de învățare este unul continuu. Mai jos găsești o parte din ce am parcurs, dincolo de articole si video-uri pe Youtube:</h3>
 
-    
+    </div>
 
 </div>
 
