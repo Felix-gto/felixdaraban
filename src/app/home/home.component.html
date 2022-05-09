@@ -22,8 +22,8 @@
             <!-- Buttons: About & Contact -->
             <div class="header-buttons">
                 <!-- About me -->
-                <a href="#about-me"><button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button></a>
-                <a href="#about-me"><button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button></a>
+                <a (click)="navigateToAboutMe()"><button *ngIf="romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>Despre mine</button></a>
+                <a (click)="navigateToAboutMe()"><button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button></a>
 
                 <!-- Contact me -->
                 <button *ngIf="romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button routerLink="/contact">Contactează-mă</button>
@@ -263,8 +263,8 @@
     <!-------------------- CALL TO ACTION -> CONTACT -------------------->
     <div class="contact-section container-fluid">
 
-        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Spune-mi despre proiectul tău!</h2>
-        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Tell me about your project!</h2> 
+        <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Vrei să colaborăm?</h2>
+        <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Would you like to work with me?</h2> 
 
         <!-- Contact-me-now -->
         <a routerLink="/contact">

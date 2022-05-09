@@ -46,4 +46,10 @@ export class HomeComponent implements OnInit {
 
   }
 
+  // About me button -> Navigate to the About me section
+  navigateToAboutMe() {
+    document.querySelector('#about-me')?.scrollIntoView({ behavior: "smooth" });
+  }
+
+
 }
