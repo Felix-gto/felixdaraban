@@ -1,1 +1,101 @@
-<p>cv works!</p>
+<!-- spell-checker:disable -->
+
+<div class="cv-page container-fluid">
+
+    <!---------- TOP SECTION -  Download PDF etc. ---------->
+    <div class="top">
+        <button *ngIf="romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Descarcă PDF</button>
+        <button *ngIf="!romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Download PDF</button>
+    </div>
+
+    <!-- Color Box -->
+    <div class="color-box"></div>
+
+    <!---------- CV ---------->
+    <div class="cv">
+
+        <!-- LEFT SECTION -->
+        <div class="cv-left">
+
+            <!-- Image -->
+            <img src="../../assets/images/felix-1.jpg" alt="Personal-image" class="cv-image">
+
+            <!-- Left Text -->
+            <div class="left-text">
+
+                <!-- Contact -->
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <h3 class="email"><span><img src="../../assets/images/email.png" alt="house-icon"></span>felix.daraban@gmail.com</h3>
+                    <h3 class="phone"><span><img src="../../assets/images/phone.png" alt="phone-icon"></span>+40 740 461 261</h3>
+                </div>
+
+                <!-- Education -->
+                <div class="education">
+                    <h2 *ngIf="romanianSet">Educație</h2>
+                    <h2 *ngIf="!romanianSet">Education</h2>
+
+                    <!-- College -->
+                    <em><h3 class="years-h3"><strong>2006-2010</strong></h3></em>
+                    <h3 *ngIf="romanianSet" class="education-h3">Universitatea Tehnică din Cluj Napoca - Facultatea de Construcţii şi Instalaţii</h3>
+                    <h3 *ngIf="!romanianSet" class="education-h3">Technical University of Cluj Napoca - Civil Engineering</h3>
+
+                    <!-- High School -->
+                    <em><h3 class="years-h3"><strong>2002-2006</strong></h3></em>
+                    <h3 *ngIf="romanianSet" class="education-h3 education-h3-highschool">Liceu: Colegiul Național Doamna Stanca, Satu Mare</h3>
+                    <h3 *ngIf="romanianSet" class="education-h3">Profil: Biochimie</h3>
+
+                    <h3 *ngIf="!romanianSet" class="education-h3 education-h3-highschool">High school: Doamna Stanca National College, Satu Mare</h3>
+                    <h3 *ngIf="!romanianSet" class="education-h3">Area of study: Biochemistry</h3>
+                </div>       
+
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="cv-right">
+
+            <!-- Title -->
+            <div class="title">
+                <h1 class="name"><span>Felix</span><span>Daraban</span></h1>
+                <em><h3>Software QA Tester</h3></em>
+            </div>     
+            
+            <!-- Work Experience -->
+            <div class="cv-right-section work-experience">
+
+                <h2 *ngIf="romanianSet" class="work-experience-title">Experiența profesională</h2>
+                <h2 *ngIf="!romanianSet" class="work-experience-title">Work Experience</h2>
+
+                <div class="work-experiences">
+                    
+                    <!-- ... Dotted line ... -->
+                    <div class="dotted-line"><h2>.............................................................</h2></div>
+
+                    <div class="jobs">
+
+                        <!-- Job: New Era Technology -->
+                        <div class="job">
+                            <mat-icon class="square">square</mat-icon>
+
+                            <div class="job-description">
+                                <h3 class="h3-title">New Era Technology, USNew Era Technology, US</h3>
+                                <h3 class="h3-subtitle">TODO: Brainstorm about what to place here...</h3>
+                            </div>                            
+                        </div>
+
+                    </div>                    
+
+                </div>               
+                
+            </div>  
+
+        </div>
+    </div>
+
+    <!-- EMPTY DIV - to cover height difference caused by left section being moved up to cover image -->
+    <div class="empty-div" [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : 'white'}"></div>
+    
+</div>
+

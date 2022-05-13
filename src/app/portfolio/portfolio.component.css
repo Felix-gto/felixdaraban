@@ -1,6 +1,6 @@
 .portfolio {
   font-family: "Satoshi", sans-serif;
-  padding: 1rem 5rem 2.5rem;
+  padding: 1rem 7.5rem 2.5rem;
 }
 
 /* Remove underline from <a> */
@@ -36,7 +36,7 @@ a {
 .card {
   display: flex;
   height: 250px;
-  width: 650px;
+  width: 625px;
   margin: 5rem 0;
 }
 
@@ -63,8 +63,8 @@ a {
 
 /* Image */
 .card-image {
-  width: 225px;
-  height: 325px;
+  width: 200px;
+  height: 300px;
   position: relative;
   left: 2rem;
   bottom: 5rem;

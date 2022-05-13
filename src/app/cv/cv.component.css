@@ -1,0 +1,193 @@
+/********** CV PAGE **********/
+.cv-page {
+  font-family: "Satoshi", sans-serif;
+  padding: 0 15rem 0;
+}
+
+/********** TOP SECTION **********/
+.top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download {
+  height: 3rem;
+  /* width: 12rem; */
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  transition: transform 0.5s, background-color 0.5s, color 0.5s;
+  background: #ebe5ef;
+  color: black;
+  position: relative;
+  top: 3rem;
+}
+
+.download:hover {
+  transform: scale(1.025);
+}
+
+/* Download icon */
+.top mat-icon {
+  height: 32px !important;
+  width: 32px !important;
+  font-size: 32px !important;
+  position: relative;
+  right: 0.25rem;
+  top: 0.25rem;
+}
+
+/* Color Box */
+.color-box {
+    width: 55rem;
+    height: 14rem;
+    background-color: #74EAFF;
+    opacity: 50%;
+    position: absolute;
+    top: 20.5rem;
+    clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/********** CV **********/
+.cv {
+    display: flex;
+}
+
+/***** LEFT SECTION *****/
+.cv-left {
+    width: 25rem;
+}
+
+/* CV Image */
+.cv-image {
+  width: 25rem;
+
+  /* Place on top of color div: set position to relative */
+  position: relative;
+}
+
+/* Icons (phone, email etc.) */
+.left-text img {
+  width: 24px;
+  position: relative;
+  top: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+/* Text Section (Content - text) */
+.left-text {
+    background-color: #424242;
+    padding: 5rem 2.5rem;
+    position: relative;
+    bottom: 5rem;
+    clip-path: polygon(0 3.5rem, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.left-text h2 {
+    color: #08B0CA;
+    margin-bottom: 0;
+}
+
+.left-text h3 {
+    color: white;
+}
+
+.education {
+    margin-top: 2.5rem;
+}
+
+.years-h3 {
+    margin-bottom: 0;
+}
+
+.education-h3 {
+    margin-top: 0;
+}
+
+.education-h3-highschool {
+    margin-bottom: 0;
+}
+
+
+/***** RIGHT SECTION *****/
+.cv-right {
+    padding-left: 2.5rem;
+    width: 100%;
+}
+
+/* Title */
+.title {
+    margin-top: 7.5rem;
+
+    /* Place on top of color div: set position to relative */
+    position: relative;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.title h3 {
+    font-size: 1.75rem;
+    margin-top: 0.75rem;
+}
+
+.cv-right-section {
+    margin-top: 5rem;
+}
+
+/* Work Experience */
+
+.work-experiences {
+    display: flex;   
+}
+
+.work-experience-title {
+    margin-bottom: 2.5rem;
+}
+
+.dotted-line {
+    transform: rotate(90deg);
+    height: 3px;
+    width: 3px;
+    color: #08B0CA;
+    position: relative;
+    left: 5rem;
+    top: 1.25rem;
+}
+
+.jobs {
+    position: relative;
+    left: 5px;
+}
+
+.square {
+    color: #08B0CA;
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    transform: rotate(45deg);
+}
+
+.job-description {
+    position: relative;
+    left: 2.5rem;
+    bottom: 2rem;
+}
+
+.job-description .h3-title {
+    margin: 0;
+}
+
+.h3-subtitle {
+    margin-top: 0;
+}
+
+/* EMPTY DIV - to cover height difference caused by left section being moved up to cover image */
+.empty-div {
+    height: 5rem;
+    position: relative;
+    bottom: 5rem;
+    z-index: 1;
+}

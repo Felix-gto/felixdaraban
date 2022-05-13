@@ -43,8 +43,9 @@
 }
 
 .header-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
+
 /* About me */
 .about-me {
   background: #EBE5EF;
