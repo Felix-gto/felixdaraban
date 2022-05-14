@@ -23,15 +23,20 @@
   margin-left: 7.5rem;
 }
 
-/* Image */
+/* Image div */
 .header-image {
   margin-right: 7.5rem;
   margin-left: 5rem;
 }
 
+/* Image */
+.header-image img {
+  width: 550px;
+}
+
 /***** BUTTONS *****/
 .header-buttons {
-  margin-top: 3.75rem;
+  margin-top: 6.5rem;
 }
 
 .header-button {
@@ -69,7 +74,7 @@ h2 {
 }
 
 .about-image img {
-  width: 325px;
+  width: 335px;
 }
 
 /* Text */
