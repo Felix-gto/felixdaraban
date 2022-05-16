@@ -55,6 +55,7 @@
 /***** LEFT SECTION *****/
 .cv-left {
     width: 25rem;
+    background-color: #424242;
 }
 
 /* CV Image */
@@ -153,7 +154,7 @@
     width: 3px;
     color: #08B0CA;
     position: relative;
-    left: 5rem;
+    left: 5.15rem;
     top: 1.25rem;
 }
 
@@ -164,10 +165,39 @@
 
 .square {
     color: #08B0CA;
-    width: 1rem;
-    height: 1rem;
-    font-size: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
     transform: rotate(45deg);
+}
+
+/* Job descriptions */
+
+.company {
+    position: relative;
+    bottom: 0.85rem;
+}
+
+.company-logo {
+    width: 46px;
+    margin-right: 1rem;
+    position: relative;
+    top: 0.6rem;
+    border-radius: 1rem;
+    transition: transform .5s;
+}
+
+.company-logo:hover {
+    transform: scale(1.05);
+}
+
+.decathlon {
+    height: 46px;
+    transition: transform .5s;
+}
+
+.decathlon:hover {
+    transform: scale(1.025);
 }
 
 .job-description {
@@ -180,9 +210,17 @@
     margin: 0;
 }
 
-.h3-subtitle {
-    margin-top: 0;
+.job-title {
+    opacity: 1;
 }
+
+
+/* Last Job - must add margin otherwise covered by the empty div below... */
+.last-job {
+    margin-bottom: 3.5rem;
+}
+
+
 
 /* EMPTY DIV - to cover height difference caused by left section being moved up to cover image */
 .empty-div {
@@ -191,3 +229,41 @@
     bottom: 5rem;
     z-index: 1;
 }
+
+
+
+/********** CALL TO ACTION -> CONTACT **********/
+.contact-section {
+    padding-bottom: 7.5rem;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .navbar-button {
+    font-size: 1.4rem;
+    font-weight: 425;
+    padding: 1.25rem 1.75rem;
+    position: relative;
+    left: 5rem;
+    bottom: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 0;
+    transition: background-color 0.5s;
+  }
+  
+  .navbar-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .navbar-button-dark {
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s;
+  }
+  
+  .navbar-button-dark:hover {
+    background-color: #532072;
+    color: white;
+  }
