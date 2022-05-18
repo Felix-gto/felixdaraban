@@ -1,0 +1,79 @@
+/* Contact Page */
+.contact-page {
+  font-family: "Satoshi", sans-serif;
+  padding: 1rem 7.5rem 7.5rem;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* LEFT */
+
+.left {
+    margin-right: 5rem;
+}
+
+.email-icon, .whatsapp-icon {
+    color: #08B0CA;
+    font-size: 1.75rem;
+    position: relative;
+    top: 0.35rem;
+    margin-right: 1rem;
+}
+
+/* Facebook & Linkedin */
+.facebook, .linkedin {
+    display: flex;
+}
+
+.facebook h3, .linkedin h3 {
+    margin: 0;
+}
+
+.linkedin {
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    margin-left: 1rem;
+}
+
+/* RIGHT - Contact Form */
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 37.5rem;
+}
+
+mat-form-field {
+    margin-top: 2rem;
+}
+
+mat-label {
+    opacity: 0.75;
+    font-size: 1.25rem;
+}
+
+/* Send button */
+.send-button {
+    height: 3.5rem;
+    font-size: 1.25rem;
+    background: #ebe5ef;
+    color: black;
+    transition: transform .5s;
+}
+
+.send-button:hover {
+    transform: scale(1.015);
+}
+
+.send-icon {
+    position: relative;
+    top: 0.2rem;
+    left: 1rem;
+}
