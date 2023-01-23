@@ -252,12 +252,13 @@
 
         <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Mai multe informații</h2>
         <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">More information</h2> 
-        
-        <h3 [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-cv"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/cv">CV</a></h3>  
 
         <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portofoliu</a></h3>  
 
         <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a  [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portfolio</a></h3> 
+
+        <h3 [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-cv"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/cv">CV</a></h3>
+        
     </div>
 
     <!-------------------- CALL TO ACTION -> CONTACT -------------------->

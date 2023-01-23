@@ -39,6 +39,11 @@
 
 .social-icon {
     margin-left: 1rem;
+    transition: transform .5s;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
 }
 
 /* RIGHT - Contact Form */
@@ -76,4 +81,9 @@ mat-label {
     position: relative;
     top: 0.2rem;
     left: 1rem;
+    transition: left .5s;
+}
+
+.send-button:hover .send-icon {
+    left: 1.5rem;
 }
