@@ -17,16 +17,11 @@
 
                 <!-- Contact Options -->
                 <ul>
-                    <li>
-                        <h3 *ngIf="romanianSet">Completează formularul de contact</h3>
-                        <h3 *ngIf="!romanianSet">Fill in the contact form</h3>
-                    </li>
-
                     <li><h3 class="email"><span><mat-icon class="email-icon">email</mat-icon></span>Email: felix.daraban@gmail.com</h3></li>
 
                     <li>
-                        <h3 *ngIf="romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">whatsapp</mat-icon></span>Telefon: +40 740 461 261</h3>
-                        <h3 *ngIf="!romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">whatsapp</mat-icon></span>Phone number: +40 740 461 261</h3>
+                        <h3 *ngIf="romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>Telefon: +40 740 461 261</h3>
+                        <h3 *ngIf="!romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>Phone number: +40 740 461 261</h3>
                     </li>
 
                     <li>
@@ -47,6 +42,11 @@
                                 <img src="../../assets/images/linkedin-icon.png" alt="linkedin-icon" class="social-icon linkedin-icon">
                             </a> 
                         </div>                    
+                    </li>
+
+                    <li>
+                        <h3 *ngIf="romanianSet">Completează formularul de contact</h3>
+                        <h3 *ngIf="!romanianSet">Fill in the contact form</h3>
                     </li>
                 </ul>
             </div>

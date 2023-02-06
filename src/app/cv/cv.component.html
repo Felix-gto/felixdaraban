@@ -59,7 +59,7 @@
             <!-- Title -->
             <div class="title">
                 <h1 class="name"><span>Felix</span><span>Daraban</span></h1>
-                <em><h3>Software QA Tester</h3></em>
+                <em><h3>Software Tester</h3></em>
             </div>     
             
             <!-- Work Experience -->
@@ -70,8 +70,8 @@
 
                 <div class="work-experiences">
                     
-                    <!-- ... Dotted line ... -->
-                    <div class="dotted-line"><h2>........................................................................................................................</h2></div>
+                    <!-- ... Dotted line ...   -> FIXME: Removed until I find a fix for responsiveness on all screens -->
+                    <!-- <div class="dotted-line"><h2>........................................................................................................................</h2></div> -->
 
                     <div class="jobs">
 
@@ -90,48 +90,56 @@
                                     <h3  *ngIf="romanianSet">Responsabilități principale:</h3>
                                     <h3  *ngIf="!romanianSet">Main responsibilities:</h3>
                                     <ul>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Asigurarea calității dezvoltării și implementării software-ului utilizat în cadrul companiei;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Ensure software quality throughout the software development life cycle;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Testarea soft-ului scris de programator, asigurând că cerințele și specificațiile sunt respectate;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Test the software to ensure that the requirements and specifications are respected;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Crearea și executarea scenariilor de test pe baza cerințelor, găsirea și raportarea bug-urilor;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Create and execute test cases based on the requirements, find and report existing bugs;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Scrierea de teste automate (Cypress), actualizarea proiectului cu fișierele de test (GitHub);</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Write automated testing scripts (Cypress), keep the GitHub project up to date with the test files;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Crearea de proceduri și manuale de instrucțiuni pentru utilizatori, precum și demo-uri.</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Create procedures and user instruction manuals, as well as make demos to relevant users.</h3></li>
                                     </ul>
                                 </ul>
 
                                 <ul>
-                                    <!-- SDM -->
-                                    <li *ngIf="romanianSet"><h3 class="job-title"><strong>Manager Operațiuni</strong> | Iulie 2020 - Iunie 2021</h3></li>
-                                    <li *ngIf="!romanianSet"><h3 class="job-title"><strong>Service Delivery Manager</strong> | July 2020 - June 2021</h3></li>
+                                    <!-- SDM (Service Delivery Manager)-->
+                                    <li *ngIf="romanianSet"><h3 class="job-title"><strong>SDM - Service Delivery Manager</strong> | Iunie 2020 - Iunie 2021</h3></li>
+                                    <li *ngIf="!romanianSet"><h3 class="job-title"><strong>SDM - Service Delivery Manager</strong> | June 2020 - June 2021</h3></li>
 
                                     <!-- Responsibilities -->
                                     <h3  *ngIf="romanianSet">Responsabilități principale:</h3>
                                     <h3  *ngIf="!romanianSet">Main responsibilities:</h3>
                                     <ul>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Gestionarea portofoliului de clienți dedicați, asigurând furnizarea serviciilor conform contractelor;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Manage the customer portfolio, ensuring that the services ar being delivered as per contracts;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Crearea și actualizarea procedurilor și a documentelor necesare departamentului Helpdesk;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Create and update the procedures and documents necessary for the Helpdesk department;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Asigurarea training-ului angajaților noi, instruirea constantă a agenților Helpdesk din subordine;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>New hire training; provide constant support, training and guidance for the Helpdesk agents;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Închiderea tichetelor, verificarea costurilor și trimiterea rapoartelor finale la clienți și contabilitate.</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Closing tickets, cost correction & validation, sending final reports to customers and Accounting.</h3></li>
                                     </ul>
                                 </ul>
 
                                 <ul>
                                     <!-- Helpdesk Agent -->
-                                    <li *ngIf="romanianSet"><h3 class="job-title"><strong>Operator Helpdesk</strong> | August 2018 - Iulie 2020</h3></li>
-                                    <li *ngIf="!romanianSet"><h3 class="job-title"><strong>Helpdesk Agent</strong> | August 2018 - July 2020</h3></li>
+                                    <li *ngIf="romanianSet"><h3 class="job-title"><strong>Helpdesk Agent</strong> | August 2018 - Iunie 2020</h3></li>
+                                    <li *ngIf="!romanianSet"><h3 class="job-title"><strong>Helpdesk Agent</strong> | August 2018 - June 2020</h3></li>
 
                                     <!-- Responsibilities -->
                                     <h3  *ngIf="romanianSet">Responsabilități principale:</h3>
                                     <h3  *ngIf="!romanianSet">Main responsibilities:</h3>
                                     <ul>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Revizuirea cerințelor și pregătirea scenariilor de test.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Reviewing requirements and preparing test scenarios.</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Prim punct de contact pentru clienții care solicită asistență, prin e-mail sau telefon;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>First point of contact for clients that request assistance via email or phone;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Monitorizarea și coordonarea tichetelor alocate, asigurând cursul corect către soluționare;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Monitor and coordinate assigned tickets, ensuring correct actions taken towards resolution;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Facilitarea comunicării între clienți și parteneri, precum și între departamentele interne relevante;</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Facilitate communication between clients and partners, as well as between relevant departments;</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Soluționarea fiecărui ticket conform particularităților și termenilor contractuali, raportare la SDM.</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Solve each ticket according to the contract terms and SLA, send the closure report to the SDM.</h3></li>
                                     </ul>
                                 </ul>
                                 
@@ -139,13 +147,13 @@
                         </div>
 
                         <!-- Lead Genius -->
-                        <div class="job">
+                        <div class="job last-job">
                             <mat-icon class="square">square</mat-icon>
 
                             <div class="job-description">
                                 <h3 class="h3-title company"><span><a href="https://www.leadgenius.com/" target="_blank"><img class="company-logo" src="../../assets/images/lead-genius.png" alt="NewEraTechnology"></a></span>LeadGenius</h3>
                                 <ul>
-                                    <!-- Software Tester -->
+                                    <!-- Data Researcher -->
                                     <li *ngIf="romanianSet"><h3 class="job-title"><strong>Cercetător de Date</strong> | Iunie 2018 - August 2018</h3></li>
                                     <li *ngIf="!romanianSet"><h3 class="job-title"><strong>Data Researcher</strong> | June 2018 - August 2018</h3></li>
 
@@ -153,28 +161,25 @@
                                     <h3  *ngIf="romanianSet">Responsabilități principale:</h3>
                                     <h3  *ngIf="!romanianSet">Main responsibilities:</h3>
                                     <ul>
-                                        <li *ngIf="romanianSet"><h3>Responsabilitatea 1.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Responsibility 1.</h3></li>
-                                        <li *ngIf="romanianSet"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3></li>
-                                        <li *ngIf="!romanianSet"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Cercetare online și colectare de date despre companii, conform specificațiilor proiectului.</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Online research and collecting data about companies, following project specifications.</h3></li>
                                     </ul>
                                 </ul>
                                 
                             </div>                            
                         </div>
 
-                        <!-- Decathlon -->
-                        <div class="job last-job">
+                        <!-- Decathlon  ->  DELETED SECTION - Not Relevant. If you want to add another experience, make sure last Job - div has class "last-job" -->
+                        
+                        <!-- <div class="job last-job">
                             <mat-icon class="square">square</mat-icon>
 
                             <div class="job-description">
                                 <a href="https://www.decathlon.ro/" target="_blank"><img class="decathlon" src="../../assets/images/decathlon.png" alt="NewEraTechnology"></a>
                                 <ul>
-                                    <!-- Software Tester -->
                                     <li *ngIf="romanianSet"><h3 class="job-title"><strong>Manager de Departament</strong> | Aprilie 2012 - Octombrie 2012</h3></li>
                                     <li *ngIf="!romanianSet"><h3 class="job-title"><strong>Department Manager</strong> | April 2012 - October 2012</h3></li>
-
-                                    <!-- Responsibilities -->
+                                    
                                     <h3  *ngIf="romanianSet">Responsabilități principale:</h3>
                                     <h3  *ngIf="!romanianSet">Main responsibilities:</h3>
                                     <ul>
@@ -186,7 +191,7 @@
                                 </ul>
                                 
                             </div>                            
-                        </div>
+                        </div> -->
 
                     </div>                    
 
