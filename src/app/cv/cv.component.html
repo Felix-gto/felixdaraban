@@ -4,8 +4,12 @@
 
     <!---------- TOP SECTION -  Download PDF etc. ---------->
     <div class="top">
-        <button *ngIf="romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Descarcă PDF</button>
-        <button *ngIf="!romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Download PDF</button>
+        <a href="../../assets/felix_daraban_cv-ro.pdf" download="Daraban Felix - CV - RO">
+            <button *ngIf="romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Descarcă CV</button>
+        </a>
+        <a href="../../assets/felix_daraban_cv-en.pdf" download="Daraban Felix - CV - EN">
+            <button *ngIf="!romanianSet" class="download mat-elevation-z4" mat-raised-button><span><mat-icon>download</mat-icon></span>Download CV</button>
+        </a>        
     </div>
 
     <!-- Color Box -->
@@ -163,6 +167,8 @@
                                     <ul>
                                         <li *ngIf="romanianSet"><h3>Cercetare online și colectare de date despre companii, conform specificațiilor proiectului.</h3></li>
                                         <li *ngIf="!romanianSet"><h3>Online research and collecting data about companies, following project specifications.</h3></li>
+                                        <li *ngIf="romanianSet"><h3>Analiza și introducerea informațiilor în baza de date LeadGenius.</h3></li>
+                                        <li *ngIf="!romanianSet"><h3>Data analysis and entry to existing LeadGenius database.</h3></li>
                                     </ul>
                                 </ul>
                                 
