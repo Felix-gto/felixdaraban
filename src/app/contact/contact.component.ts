@@ -5,8 +5,9 @@ import { Subscription } from 'rxjs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+// Form
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-
+import { NgForm } from '@angular/forms';
 
 
 // Dark Mode Service
@@ -51,6 +52,11 @@ export class ContactComponent implements OnInit {
       this.romanianSet = romanianOnStatus;
     })
 
+  }
+
+  // Form
+  onSubmit(form:NgForm) {
+    console.log(form);
   }
 
 }

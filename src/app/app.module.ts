@@ -28,7 +28,8 @@ import { CvComponent } from './cv/cv.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-// 
+// Form (Contact page)
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatTooltipModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+
+    // Form (Contact Page)
+    FormsModule
   ],
   providers: [DarkModeService, LanguageService],
   bootstrap: [AppComponent]
