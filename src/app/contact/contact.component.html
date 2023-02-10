@@ -108,6 +108,9 @@
                 <button type="submit" *ngIf="romanianSet" class="send-button mat-elevation-z4" mat-raised-button [disabled]="!formData.valid">Trimite mesajul<span><mat-icon class="send-icon">send</mat-icon></span></button>
                 <button type="submit" *ngIf="!romanianSet" class="send-button mat-elevation-z4" mat-raised-button [disabled]="!formData.valid">Send Message<span><mat-icon class="send-icon">send</mat-icon></span></button>
 
+                <p class="message-sent" *ngIf="romanianSet && submitted">Mesajul tău a fost trimis!</p>
+                <p class="message-sent" *ngIf="!romanianSet && submitted">Your message has been sent!</p>
+
             </form>
 
         </div>

@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 // Form
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+// import {FormGroup, FormControl, Validators} from '@angular/forms';   // Not used as I opted for Template Driven Form (Not Reactive Form)
 import { NgForm } from '@angular/forms';
 
 
@@ -54,9 +54,28 @@ export class ContactComponent implements OnInit {
 
   }
 
-  // Form
+  	// USER OBJECT which stores the submitted data
+    user = {
+	    userName: '',
+	    userEmail: '',
+	    userMessage: '',
+	  }
+	
+  // Submitted Property - set to true after submitting Form (ex. for showing the "message-sent" paragraph etc.)
+  submitted = false;
+
+  // Form - On Submit
   onSubmit(form:NgForm) {
-    console.log(form);
+    // console.log(form.value);
+    
+    this.user.userName = form.value.fullName;
+    this.user.userEmail = form.value.email;
+    this.user.userMessage = form.value.message;
+
+    console.log(this.user);
+
+    this.submitted = true;
+
   }
 
 }

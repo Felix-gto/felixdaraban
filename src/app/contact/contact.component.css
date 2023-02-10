@@ -87,3 +87,9 @@ mat-label {
 .send-button:hover .send-icon {
     left: 1.5rem;
 }
+
+.message-sent {
+    color: green;
+    font-weight: 500;
+    font-size: 22px;
+}
