@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
+
 // Angular Material Components
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-// Form
+// FORM
 // import {FormGroup, FormControl, Validators} from '@angular/forms';   // Not used as I opted for Template Driven Form (Not Reactive Form)
 import { NgForm } from '@angular/forms';
-
 
 // Dark Mode Service
 import { DarkModeService } from '../dark-mode.service';
 
 // Language Service
 import { LanguageService } from '../language.service';
+
+// EMAIL - Send Email with SmtpJS.com -> Add download JavaScript file from site, add to assets, include script in angular.json scripts array (Also included CDN in index.html). Then here, declare the variable Email
+declare let Email: any;
 
 @Component({
   selector: 'app-contact',
@@ -76,6 +79,20 @@ export class ContactComponent implements OnInit {
 
     this.submitted = true;
 
+    // Send Email with SmtpJS.com
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "felix.daraban@gmail.com",
+      Password : "1E26B36EF4EDA1FEEC93D95B6711B08A1953",
+      To : 'felix.daraban@gmail.com',
+      From : 'felix.daraban@gmail.com',
+      Subject : "Ai un mesaj nou de pe Site-ul Personal",
+      Body : "Name: " + this.user.userName 
+              + "<br> Email: " + this.user.userEmail
+              + "<br> Message: " + this.user.userMessage
+  });
+
   }
+
 
 }
