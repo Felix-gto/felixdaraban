@@ -1,4 +1,28 @@
+/******************** SIDENAV ********************/
+.sidenav-items {
+  margin: auto 1rem;
+}
+
+.close-menu {
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: solid;
+  border-width: 1px;
+  border-color: #8DE7EF;
+}
+
+.close-menu:hover {
+  border-color: #A94FFF;
+}
+
+
 /******************** NAVIGATION BAR ********************/
+
+/* Sidenav - Hidden - Home, Portfolio, CV */
+.menu-button {
+  display: none;
+}
+
 mat-toolbar {
   height: 6.5rem;
   padding: 0 2.5rem;
@@ -9,7 +33,6 @@ mat-toolbar {
 .active-link {
   color: #A94FFF !important;
 }
-
 
 .spacer {
   flex: 1 1 auto;
@@ -34,7 +57,9 @@ mat-toolbar {
 }
 
 .navbar-links:hover,
-.navbar-brand:hover {
+.navbar-brand:hover,
+.sidenav-items:hover,
+.sidenav-icon {
   opacity: 0.65;
 }
 
@@ -66,7 +91,7 @@ mat-toolbar {
   color: white;
 }
 
-/* Navbar Links -  Underline on Hover */
+/* Navbar & Sidenav Links -  Underline on Hover */
 .navbar-links {
   overflow: hidden;
   position: relative;
@@ -75,7 +100,15 @@ mat-toolbar {
   transition: opacity 0.5s;
 }
 
-.navbar-links::after {
+.sidenav-items { 
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: opacity 0.5s;
+}
+
+.navbar-links::after,
+.sidenav-items::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -86,12 +119,15 @@ mat-toolbar {
   transition: transform 300ms;
 }
 
-.navbar-links::after {
+.navbar-links::after,
+.sidenav-items::after {
   transform: translate3d(-100%, 0, 0);
 }
 
 .navbar-links:hover::after,
-.navbar-links:focus::after {
+.navbar-links:focus::after,
+.sidenav-items:hover::after,
+.sidenav-items:focus::after {
   transform: translate3d(0, 0, 0);
 }
 
@@ -219,4 +255,119 @@ hr {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 0.75rem;
+}
+
+
+/********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
+
+/***** LAPTOPS *****/
+@media (max-width: 1280px){
+
+  /* Navbar */
+
+  .navbar-brand {
+    margin-left: 3.5rem; 
+  }
+
+  .navbar-links {
+    margin: auto 2.5rem;
+  }
+
+  .cv {
+    margin-right: 5rem;
+  }
+
+}
+
+/***** MIDDLE: LAPTOPS - TABLETS *****/
+@media (max-width: 1080px){
+
+  .navbar-brand {
+    margin-left: 0;
+    width: 4.5rem;    
+  }
+
+  .navbar-links {
+    margin: auto 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .cv {
+    margin-right: 3rem;
+  }
+
+  .navbar-button {
+    font-size: 1.25rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .ro-en {
+    margin-right: 0;
+    margin-left: 3.5rem;
+  }
+
+}
+
+/***** TABLETS -> Hamburger Menu in Navbar *****/
+@media (max-width: 768px){
+
+  .navbar-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  mat-toolbar {
+    height: 5rem;
+    padding: 0 2rem;
+  }
+
+  .menu-icon {
+    height: 48px !important;
+		width: 48px !important;
+    font-size: 48px !important;
+    padding-top: 0.5rem !important;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .navbar-button {
+    font-size: 1rem;
+    padding: 0.15rem 1.25rem;
+  }
+  
+}
+
+/***** MOBILE & SMALL SCREENS *****/
+
+@media (max-width: 480px){
+  .navbar-button {
+    font-size: 0.85rem;
+    padding: 0.10rem 1rem;
+    margin-left: 2.5rem;
+  }
+
+  .ro-en {
+    margin-right: 0;
+    margin-left: 1.5rem;
+  }
+
+}
+
+@media (max-width: 320px){
+  .navbar-button {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .ro-en {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
 }

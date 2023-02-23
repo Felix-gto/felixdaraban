@@ -79,7 +79,7 @@ export class ContactComponent implements OnInit {
 
     this.submitted = true;
 
-    // Send Email with SmtpJS.com
+    // Send Email with SmtpJS.com. Also you need an account on https://app.elasticemail.com/ -> See Settings / SMTP
     Email.send({
       Host : "smtp.elasticemail.com",
       Username : "felix.daraban@gmail.com",

@@ -13,6 +13,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 
 
 // Dark Mode Service
@@ -53,6 +56,9 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
 
     // Form (Contact Page)
     FormsModule

@@ -1,130 +1,168 @@
 <!-- spell-checker:disable -->
 
-<!-------------------- NAVBAR -------------------->
-<mat-toolbar 
-  class="mat-app-background" 
-  [class.dark-mode]="darkModeSet"
-  [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
->
+<!-- SIDENAV CONTAINER - Added fullscreen attribute to make sure the container occupies the full viewport of the browser, must include all content of the page -->
+<mat-sidenav-container fullscreen>
 
-  <!-- BRAND -->
-  <a routerLink="">
-    <img src="../../assets/images/logo.png" alt="Felix-Daraban-Logo" class="navbar-brand"/>
-  </a>
+  <!-- SIDENAV -->
+  <mat-sidenav #sidenav [autoFocus]="false" [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}">
+    <mat-nav-list>
+      <button mat-icon-button class="close-menu" (click)="sidenav.close()" [ngStyle]="{color: darkModeSet ? '#fff' : '#000'}">
+        <mat-icon>close</mat-icon>
+      </button>
 
-  <span class="spacer"></span>
-
-  <!-- Home -->
-  <a *ngIf="!romanianSet" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Home </a>
-  <a *ngIf="romanianSet" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Acasă </a>
-  
-  <!-- Portfolio -->
-  <a *ngIf="!romanianSet" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portfolio </a>
-  <a *ngIf="romanianSet" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portofoliu </a>
-
-  <!-- CV -->
-  <a routerLink="/cv" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links cv" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">CV</a>
-
-  <!-- Contact -->
-  <a routerLink="/contact">
-    <button mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
-      Contact
-    </button>
-  </a>
-
-  <!-- Language Toggle (RO/EN) - Changes language from  based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
-  <div class="ro-en">
-    <div class="romanian" *ngIf="romanianSet; else ro" matTooltip="Switch to English" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
-      <img class="flag" src="../../assets/images/english-flag.png" alt="romanian-flag">
-    </div>
-
-    <ng-template #ro>
-      <div class="english" matTooltip="Switch to Romanian" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
-        <img class="flag" src="../../assets/images/romanian-flag.png" alt="english-flag">
-      </div>      
-    </ng-template>    
-  </div>
-
-  <!-- DARK MODE Toggle - Changes icon based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
-  <mat-icon
-  *ngIf="darkModeSet; else elseBlock" 
-  class="light-mode-icon" 
-  (click)="toggleDarkMode()"
-  matTooltip="Switch to light mode"
-  matTooltipShowDelay="500"
-  matTooltipClass="tooltip">
-  light_mode
-  </mat-icon>
-
-  <ng-template #elseBlock>
-    <mat-icon
-      class="dark-mode-icon" 
-      (click)="toggleDarkMode()"
-      matTooltip="Switch to dark mode"
-      matTooltipShowDelay="500"
-      matTooltipClass="tooltip">
-      dark_mode
-    </mat-icon>
-  </ng-template>
-  
-</mat-toolbar>
-
-<!-------------------- MAIN PAGE -------------------->
-<div 
-  class="main-page mat-app-background" 
-  [class.dark-mode]="darkModeSet" 
-  [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
->
-
-  <router-outlet></router-outlet>
-
-</div>
-
-<!-------------------- FOOTER -------------------->
-<mat-toolbar class="footer-contact">
-  
-  <!-- Contact Details -->
-  <div class="contact-details">
-    <!-- Icon colors (iconsdb.com): #08B0CA -->
-    <h3 *ngIf="romanianSet" class="footer-text"><span><img src="../../assets/images/house.png" alt="house-icon"></span>Cluj Napoca, România</h3>
-    <h3 *ngIf="!romanianSet" class="footer-text"><span><img src="../../assets/images/house.png" alt="house-icon"></span>Cluj Napoca, Romania</h3>
-    <h3 class="footer-text"><span><img src="../../assets/images/email.png" alt="house-icon"></span>felix.daraban@gmail.com</h3>
-  </div>
-
-  <!-- Social -->
-  <div class="social">
-
-    <h3 class="social-text footer-text">Social Media</h3>
-
-    <div class="social-icons">
-      <a href="https://www.facebook.com/felix.daraban" target="_blank">
-        <img src="../../assets/images/facebook-icon.png" alt="facebook-icon" class="social-icon facebook-icon">
+      <a mat-list-item routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()" [ngStyle]="{color: darkModeSet ? '#fff' : '#000'}">
+        <mat-icon class="sidenav-icon">home</mat-icon>
+        <span *ngIf="!romanianSet" class="sidenav-items">Home</span>
+        <span *ngIf="romanianSet" class="sidenav-items">Acasă</span>
       </a>
-      <a href="https://www.linkedin.com/in/felixdaraban" target="_blank">
-        <img src="../../assets/images/linkedin-icon.png" alt="linkedin-icon" class="social-icon linkedin-icon">
-      </a> 
+
+      <a mat-list-item routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()" [ngStyle]="{color: darkModeSet ? '#fff' : '#000'}">
+        <mat-icon class="sidenav-icon">work</mat-icon>
+        <span *ngIf="!romanianSet" class="sidenav-items">Portfolio</span>
+        <span *ngIf="romanianSet" class="sidenav-items">Portofoliu</span>
+      </a>
+
+      <a mat-list-item routerLink="/cv" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()" [ngStyle]="{color: darkModeSet ? '#fff' : '#000'}">
+        <mat-icon class="sidenav-icon">account_box</mat-icon>
+        <span class="sidenav-items">CV</span>
+      </a>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <!-------------------- NAVBAR -------------------->
+  <mat-toolbar 
+    class="mat-app-background" 
+    [class.dark-mode]="darkModeSet"
+    [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
+  >
+  
+    <!-- MENU Button - Visible on smaller screens -->
+    <button mat-icon-button class="menu-button" (click)="sidenav.open()">
+      <mat-icon class="menu-icon">menu</mat-icon>
+    </button>
+
+    <!-- BRAND -->
+    <a routerLink="">
+      <img src="../../assets/images/logo.png" alt="Felix-Daraban-Logo" class="navbar-brand"/>
+    </a>
+
+    <span class="spacer"></span>
+
+    <!-- Home -->
+    <a *ngIf="!romanianSet" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Home </a>
+    <a *ngIf="romanianSet" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Acasă </a>
+    
+    <!-- Portfolio -->
+    <a *ngIf="!romanianSet" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portfolio </a>
+    <a *ngIf="romanianSet" routerLink="/portfolio" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}"> Portofoliu </a>
+
+    <!-- CV -->
+    <a routerLink="/cv" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="navbar-links cv" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">CV</a>
+
+    <!-- Contact -->
+    <a routerLink="/contact">
+      <button mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
+        Contact
+      </button>
+    </a>
+
+    <!-- Language Toggle (RO/EN) - Changes language from  based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
+    <div class="ro-en">
+      <div class="romanian" *ngIf="romanianSet; else ro" matTooltip="Switch to English" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
+        <img class="flag" src="../../assets/images/english-flag.png" alt="romanian-flag">
+      </div>
+
+      <ng-template #ro>
+        <div class="english" matTooltip="Switch to Romanian" matTooltipShowDelay="500" matTooltipClass="tooltip" (click)="languageClicked()">
+          <img class="flag" src="../../assets/images/romanian-flag.png" alt="english-flag">
+        </div>      
+      </ng-template>    
     </div>
 
+    <!-- DARK MODE Toggle - Changes icon based on darkModeSet state (true/false) and executes toggleDarkMode() which changes the darkModeOn property in the DarkModeService to true or false-->
+    <mat-icon
+    *ngIf="darkModeSet; else elseBlock" 
+    class="light-mode-icon" 
+    (click)="toggleDarkMode()"
+    matTooltip="Switch to light mode"
+    matTooltipShowDelay="500"
+    matTooltipClass="tooltip">
+    light_mode
+    </mat-icon>
+
+    <ng-template #elseBlock>
+      <mat-icon
+        class="dark-mode-icon" 
+        (click)="toggleDarkMode()"
+        matTooltip="Switch to dark mode"
+        matTooltipShowDelay="500"
+        matTooltipClass="tooltip">
+        dark_mode
+      </mat-icon>
+    </ng-template>
+    
+  </mat-toolbar>
+
+  <!-------------------- MAIN PAGE -------------------->
+  <div 
+    class="main-page mat-app-background" 
+    [class.dark-mode]="darkModeSet" 
+    [ngStyle]="{backgroundColor: darkModeSet ? '#303030' : '#ffffff'}"
+  >
+
+    <router-outlet></router-outlet>
+
   </div>
-  
-</mat-toolbar>
 
-<!-- hr -->
-<div class="hr-container">
-  <div class="hr">
-    <hr>
+  <!-------------------- FOOTER -------------------->
+  <mat-toolbar class="footer-contact">
+    
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <!-- Icon colors (iconsdb.com): #08B0CA -->
+      <h3 *ngIf="romanianSet" class="footer-text"><span><img src="../../assets/images/house.png" alt="house-icon"></span>Cluj Napoca, România</h3>
+      <h3 *ngIf="!romanianSet" class="footer-text"><span><img src="../../assets/images/house.png" alt="house-icon"></span>Cluj Napoca, Romania</h3>
+      <h3 class="footer-text"><span><img src="../../assets/images/email.png" alt="house-icon"></span>felix.daraban@gmail.com</h3>
+    </div>
+
+    <!-- Social -->
+    <div class="social">
+
+      <h3 class="social-text footer-text">Social Media</h3>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/felix.daraban" target="_blank">
+          <img src="../../assets/images/facebook-icon.png" alt="facebook-icon" class="social-icon facebook-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/felixdaraban" target="_blank">
+          <img src="../../assets/images/linkedin-icon.png" alt="linkedin-icon" class="social-icon linkedin-icon">
+        </a> 
+      </div>
+
+    </div>
+    
+  </mat-toolbar>
+
+  <!-- hr -->
+  <div class="hr-container">
+    <div class="hr">
+      <hr>
+    </div>
   </div>
-</div>
 
 
-<mat-toolbar class="footer-copyright">
-  <div class="copyright-text">
-    <h3 *ngIf="romanianSet" class="footer-text">Design și development de Felix Dărăban</h3>
-    <h3 *ngIf="!romanianSet" class="footer-text">Designed and developed by Felix Daraban</h3>
-  </div>
+  <mat-toolbar class="footer-copyright">
+    <div class="copyright-text">
+      <h3 *ngIf="romanianSet" class="footer-text">Design și development de Felix Dărăban</h3>
+      <h3 *ngIf="!romanianSet" class="footer-text">Designed and developed by Felix Daraban</h3>
+    </div>
 
-  <div class="copyright-year">
-    <h3 class="footer-text">© {{ currentYear }}</h3>
-  </div>
+    <div class="copyright-year">
+      <h3 class="footer-text">© {{ currentYear }}</h3>
+    </div>
 
-</mat-toolbar>
+  </mat-toolbar>
+
+</mat-sidenav-container>
