@@ -212,3 +212,32 @@ h2 {
   background-color: #532072;
   color: white;
 }
+
+
+/********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
+
+/***** LAPTOPS *****/
+@media (max-width: 1280px){
+
+
+}
+
+/***** MIDDLE: LAPTOPS - TABLETS *****/
+@media (max-width: 1080px){
+
+}
+
+/***** TABLETS -> Hamburger Menu in Navbar *****/
+@media (max-width: 768px){
+  
+}
+
+/***** MOBILE & SMALL SCREENS *****/
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 320px){
+
+}

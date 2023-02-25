@@ -325,9 +325,9 @@ hr {
   }
 
   .menu-icon {
-    height: 48px !important;
-		width: 48px !important;
-    font-size: 48px !important;
+    height: 56px !important;
+		width: 56px !important;
+    font-size: 56px !important;
     padding-top: 0.5rem !important;
   }
 
@@ -337,7 +337,44 @@ hr {
 
   .navbar-button {
     font-size: 1rem;
-    padding: 0.15rem 1.25rem;
+    padding: 0rem 1.25rem;
+  }
+
+  /* FOOTER */
+
+  .contact-details {
+    margin-right: 2.5rem;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 6rem;
+    background-color: #0d0d0d;
+  }
+
+  .contact-details {
+    margin-right: 10rem;
+  }
+
+  .social {
+    padding-top: 2rem;
+  }
+
+  .hr-container {
+    padding-top: 6.5rem;
+  }
+
+  .hr {
+    display: none;
+  }
+
+  .footer-copyright {
+    padding-bottom: 7.5rem;
+  }
+
+  .copyright-text {
+    display: none;
   }
   
 }
@@ -347,7 +384,7 @@ hr {
 @media (max-width: 480px){
   .navbar-button {
     font-size: 0.85rem;
-    padding: 0.10rem 1rem;
+    padding: 0 1rem;
     margin-left: 2.5rem;
   }
 
@@ -355,6 +392,12 @@ hr {
     margin-right: 0;
     margin-left: 1.5rem;
   }
+
+  /* FOOTER */
+  .footer-contact, .footer-copyright {
+    padding-left: 1.5rem;
+  }
+
 
 }
 
@@ -368,6 +411,11 @@ hr {
   .ro-en {
     margin-right: 0;
     margin-left: 1rem;
+  }
+
+   /* FOOTER */
+   .footer-contact, .footer-copyright {
+    padding-left: 0.5rem;
   }
 
 }
