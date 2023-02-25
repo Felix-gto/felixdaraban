@@ -263,8 +263,11 @@ hr {
 /***** LAPTOPS *****/
 @media (max-width: 1280px){
 
-  /* Navbar */
+  .main-page {
+    padding: 2.5rem 3rem;
+  }
 
+  /* Navbar */
   .navbar-brand {
     margin-left: 3.5rem; 
   }
@@ -382,6 +385,11 @@ hr {
 /***** MOBILE & SMALL SCREENS *****/
 
 @media (max-width: 480px){
+
+  .main-page {
+    padding: 1rem 1.5rem;
+  }
+
   .navbar-button {
     font-size: 0.85rem;
     padding: 0 1rem;
@@ -398,10 +406,14 @@ hr {
     padding-left: 1.5rem;
   }
 
-
 }
 
 @media (max-width: 320px){
+
+  .navigation-bar {
+    padding: 0 5px;
+  }
+
   .navbar-button {
     font-size: 0.75rem;
     padding: 0 1rem;
@@ -416,6 +428,10 @@ hr {
    /* FOOTER */
    .footer-contact, .footer-copyright {
     padding-left: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 
 }

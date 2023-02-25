@@ -33,9 +33,7 @@
         </div>
             
         <!-- Image -->
-        <div class="header-image">        
-            <img src="../../assets/images/profile1.jpg" alt="Personal-image" class="title-image">
-        </div>       
+        <img src="../../assets/images/profile1.jpg" alt="Personal-image" class="title-image">   
     
     </div>
 
@@ -112,7 +110,7 @@
                 <hr *ngIf="romanianSet">
             </div>
             <div class="expertise">
-                <hr *ngIf="romanianSet">
+                <hr class="hr-delete" *ngIf="romanianSet">
                 <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Service delivery management</h3>
                 <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Experiența ca SDM mi-a ridicat nivelul de muncă în echipă, coordonare, relaționare cu clienții și partenerii.</h3>
                 <hr *ngIf="romanianSet">
@@ -156,7 +154,7 @@
                 <hr *ngIf="!romanianSet">
             </div>
             <div class="expertise">
-                <hr *ngIf="!romanianSet">
+                <hr class="hr-delete" *ngIf="!romanianSet">
                 <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title">Service delivery management</h3>
                 <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">The experience working as an SDM raised my level of team work, coordination, and interaction with clients and partners.</h3>
                 <hr *ngIf="!romanianSet">
@@ -208,7 +206,7 @@
                 <hr *ngIf="romanianSet">
             </div>
             <div class="skills">
-                <hr *ngIf="romanianSet">
+                <hr class="hr-delete" *ngIf="romanianSet">
                 <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/figma-icon.png" alt="figma-icon"></span>Figma</h3>
                 <h3 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Aplicație de design UI și UX extrem de utilă, am folosit și voi continua să folosesc Figma pentru proiecte personale.</h3>
                 <hr *ngIf="romanianSet">
@@ -252,7 +250,7 @@
                 <hr *ngIf="!romanianSet">
             </div>
             <div class="skills">
-                <hr *ngIf="!romanianSet">
+                <hr class="hr-delete" *ngIf="!romanianSet">
                 <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title"><span><img src="../../assets/images/figma-icon.png" alt="figma-icon"></span>Figma</h3>
                 <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Extremely useful UI and UX design tool, I used and will continue to use Figma for personal projects.</h3>
                 <hr *ngIf="!romanianSet">
@@ -283,11 +281,11 @@
         <!-- Contact-me-now -->
         <a routerLink="/contact">
 
-            <button *ngIf="romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
+            <button *ngIf="romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button contact-me-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
             Contactează-mă acum >>
             </button>
 
-            <button *ngIf="!romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
+            <button *ngIf="!romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button contact-me-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
                 Contact me now >>
             </button>
         </a>

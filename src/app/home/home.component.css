@@ -23,20 +23,20 @@
   margin-left: 7.5rem;
 }
 
-/* Image div */
-.header-image {
-  margin-right: 7.5rem;
-  margin-left: 5rem;
+.header-paragraphs {
+  margin-bottom: 5rem;
 }
 
-/* Image */
-.header-image img {
-  width: 550px;
+/* Image div */
+.title-image {
+  margin-right: 7.5rem;
+  margin-left: 5rem;
+  width: 530px;
 }
 
 /***** BUTTONS *****/
 .header-buttons {
-  margin-top: 6.5rem;
+  margin-top: 5rem;
 }
 
 .header-button {
@@ -120,9 +120,6 @@ h2 {
 /********** ME & MY WORK **********/
 .work-section {
   padding: 0 7.5rem 10rem;
-}
-
-.work-section {
   display: inline-block;
 }
 
@@ -213,31 +210,219 @@ h2 {
   color: white;
 }
 
+.contact-me-button {
+  left: 0;
+  bottom: 0;
+  margin-left: 5rem;
+}
+
 
 /********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
 
-/***** LAPTOPS *****/
+/***** Large screens <1600PX *****/
+@media (max-width: 1600px){
+
+  h1 {
+    font-size: 3.15rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+  
+    /* Intro */
+  .header-intro {
+    margin-left: 2.5rem;
+  }
+  
+  /* Image div */
+  .title-image {
+    margin-right: 0;
+    margin-left: 2rem;
+    width: 425px;
+  }
+
+  .header-buttons {
+    margin-top: 2.5rem;
+  }
+
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 7.5rem 0 7.5rem 2.5rem;
+  }
+
+  .expertise-section, .skills-section, .work-section, .contact-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .about-text {
+    margin-left: 2rem;
+  }
+  
+}
+
+/***** LAPTOPS <1280PX *****/
 @media (max-width: 1280px){
 
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .header-button {
+    height: 3.75rem;
+    width: 10rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .title-image {
+    width: 400px;
+  }
 
 }
 
 /***** MIDDLE: LAPTOPS - TABLETS *****/
-@media (max-width: 1080px){
+@media (max-width: 1024px){
+
+  .header-section {
+    flex-wrap: wrap-reverse;
+  }  
+
+  .title-image {
+    width: 350px;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .about-text {
+    margin: 0;
+  } 
 
 }
 
-/***** TABLETS -> Hamburger Menu in Navbar *****/
+
+/***** TABLETS *****/
 @media (max-width: 768px){
+
+  .header-intro {
+    margin-left: 0;
+  }
+
+  .title-image {
+    width: 275px;
+  }
+
+  .about-section {
+  padding: 7.5rem 0;
+  }
+
+  /* EXPERTISE & SKILLS */
+  .expertise-section {
+    padding-bottom: 7.5rem;
+  }
+
+  .expertise-section, .skills-section, .work-section, .contact-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .expertise-row, .skills-row {
+    flex-wrap: wrap;
+  }
+
+  .expertise, .skills {
+    flex-basis: 100%;
+  }
+
+  .hr-delete {
+    display: none;
+  }
   
+  .skills-section {
+    padding: 0 0 7.5rem;
+  }
+
+  /* ME & MY WORK + CALL TO ACTION */
+
+  .contact-section, .work-section {
+    padding-bottom: 7.5rem;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact-section a {
+    flex-basis: 100%;
+  }
+
+  .contact-me-button {
+    margin-left: 0;
+  }
+
 }
 
 /***** MOBILE & SMALL SCREENS *****/
 
 @media (max-width: 480px){
 
+  .title-image {
+    width: 175px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }  
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .about-me {
+    margin-right: 1.5rem;
+  }
+  .contact-me {
+    margin-top: 1.5rem;
+    margin-left: 0;
+  }
+
+  .header-button {
+    height: 3rem;
+    width: 9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-me-button {
+    height: 4rem;
+    width: 15rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
 }
 
 @media (max-width: 320px){
+  .title-image {
+    width: 150px;
+  }
 
+  .contact-me-button {
+    height: 3.75rem;
+    width: 12.5rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
 }
