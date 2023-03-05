@@ -148,7 +148,7 @@
     margin-bottom: 2.5rem;
 }
 
-.dotted-line {
+/* .dotted-line {
     transform: rotate(90deg);
     height: 3px;
     width: 3px;
@@ -156,7 +156,7 @@
     position: relative;
     left: 5.15rem;
     top: 1.25rem;
-}
+} */
 
 .jobs {
     position: relative;
@@ -280,8 +280,8 @@
 @media (max-width: 1600px){
 
     .cv-page { 
-        padding-left: 7.5rem;
-        padding-right: 7.5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 
     h1 {
@@ -302,6 +302,11 @@
 /***** LAPTOPS <1280PX *****/
 @media (max-width: 1280px){
 
+    .cv-page { 
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;   
+    }
+
     h1 {
         font-size: 2.75rem;
     }
@@ -309,18 +314,92 @@
     h2 {
     font-size: 2.25rem;
     }
-    
-  
+      
 }
   
 /***** MIDDLE: LAPTOPS - TABLETS *****/
 @media (max-width: 1024px){
-  
+
+    .cv-page { 
+        padding-left: 0;
+        padding-right: 0;   
+    }  
+
+    /* LEFT SECTION */
+    .cv-left, .cv-image {
+        width: 19rem;
+    }
+
+    .left-text {
+        padding: 5rem 1rem;
+    }
+
+    /* Color Box */
+    .color-box {
+        width: 44rem;
+        height: 12.5rem;
+    }
+
+    /* RIGHT SECTION */
+
+    .cv-right {
+        padding-left: 1.5rem;
+    }
+
+    .jobs {
+        left: 0px;
+    }
+
+    .job-description {
+        left: 0;
+    }
+
+    .job-responsibilities {
+        padding-left: 1.5rem;
+    }
+    
 }
   
 /***** TABLETS *****/
 @media (max-width: 768px){
 
+    /* WRAP LEFT AND RIGHT */
+    .top {
+        justify-content: flex-start;        
+    }
+      
+    .download {
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        top: 0;
+        height: 2.5rem;
+    }
+
+    .cv {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    /* HIDE COLOR BOX AND TITLE */
+    .color-box, .title {
+        display: none;
+    }
+
+    .left-text {
+        padding-bottom: 0;
+    }
+
+    .cv-right {
+        padding-left: 0;
+    }
+
+    .empty-div {
+        display: none;
+    }
+
+    /* CALL TO ACTION - CONTACT ME */
     .contact-section {
         padding-left: 0;
         padding-right: 0;
@@ -355,13 +434,44 @@
       h3 {
         font-size: 1rem;
     }
+
+    .work-experience-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
   
+    /* CALL TO ACTION - CONTACT ME */
     .contact-me-button {
       height: 4rem;
       width: 15rem;
       padding: 0.5rem 1rem;
       font-size: 1rem;
     }  
+}
+
+@media (max-width: 370px){
+  
+    .cv-left, .cv-image {
+        width: 100%;
+    }
+
+    .company {
+        right: 1.25rem;
+    }
+
+    .company-logo {
+        margin-right: 0;
+    }
+
+    ul {
+        padding-left: 0.5rem;
+    }
+
+    .job-responsibilities {
+        padding-left: 0.75rem;
+    }    
+  
 }
   
 @media (max-width: 320px){
