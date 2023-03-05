@@ -237,9 +237,9 @@
     padding-bottom: 7.5rem;
     display: flex;
     align-items: baseline;
-  }
+}
   
-  .navbar-button {
+.navbar-button {
     font-size: 1.4rem;
     font-weight: 425;
     padding: 1.25rem 1.75rem;
@@ -250,20 +250,128 @@
     color: white;
     border-radius: 0;
     transition: background-color 0.5s;
-  }
+}
   
-  .navbar-button:hover {
+.navbar-button:hover {
     background-color: white;
     color: black;
-  }
+}
   
-  .navbar-button-dark {
+.navbar-button-dark {
     background-color: white;
     color: black;
     transition: background-color 0.5s;
-  }
+}
   
-  .navbar-button-dark:hover {
+.navbar-button-dark:hover {
     background-color: #532072;
     color: white;
-  }
+}
+
+.contact-me-button {
+    left: 0;
+    bottom: 0;
+    margin-left: 5rem;
+}
+
+/********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
+
+/***** Large screens <1600PX *****/
+@media (max-width: 1600px){
+
+    .cv-page { 
+        padding-left: 7.5rem;
+        padding-right: 7.5rem;
+    }
+
+    h1 {
+        font-size: 3.15rem;
+    }
+    
+    h2 {
+        font-size: 2.75rem;
+    }
+
+    .contact-section {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    
+}
+  
+/***** LAPTOPS <1280PX *****/
+@media (max-width: 1280px){
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+    font-size: 2.25rem;
+    }
+    
+  
+}
+  
+/***** MIDDLE: LAPTOPS - TABLETS *****/
+@media (max-width: 1024px){
+  
+}
+  
+/***** TABLETS *****/
+@media (max-width: 768px){
+
+    .contact-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .contact-section {
+      padding-bottom: 7.5rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .contact-section a {
+      flex-basis: 100%;
+    }
+  
+    .contact-me-button {
+      margin-left: 0;
+    }
+}
+  
+/***** MOBILE & SMALL SCREENS *****/
+@media (max-width: 480px){
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+      h2 {
+        font-size: 1.25rem;
+    }  
+    
+      h3 {
+        font-size: 1rem;
+    }
+  
+    .contact-me-button {
+      height: 4rem;
+      width: 15rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }  
+}
+  
+@media (max-width: 320px){
+  
+    .contact-me-button {
+      height: 3.75rem;
+      width: 12.5rem;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  
+}
+  

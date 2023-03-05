@@ -52,10 +52,10 @@ export class PortfolioComponent implements OnInit {
   /***** PROGRESS BARS *****/ 
 
   // COUNTERS
-  counter1 = 0;
-  counter2 = 0;
-  counter3 = 0;
-  counter4 = 0; 
+  counter1 = 70;
+  counter2 = 50;
+  counter3 = 100;
+  counter4 = 30;
   
   // My Learning Section - Listen for scroll and run Progress Bars when section scrolled into view...
   @HostListener("window:scroll", [])
@@ -83,67 +83,67 @@ export class PortfolioComponent implements OnInit {
 
   }  
 
-  // RUN PROGRESS BARS
+  // FIXME:  RUN PROGRESS BARS 
   runProgressBars() {
 
-    setInterval(() => {
-      // First counter
-      if(this.counter1 == 70){
-          clearInterval();
-      }else{
-          this.counter1 +=1;
-      }
-    }, 30);
+    // setInterval(() => {
+    //   // First counter
+    //   if(this.counter1 == 70){
+    //       clearInterval();
+    //   }else{
+    //       this.counter1 +=1;
+    //   }
+    // }, 30);
 
-    setInterval(() => {
-      // Second counter
-      if(this.counter2 == 50){
-        clearInterval();
-      }else{
-          this.counter2 +=1;
-      }
-    }, 40);
+    // setInterval(() => {
+    //   // Second counter
+    //   if(this.counter2 == 50){
+    //     clearInterval();
+    //   }else{
+    //       this.counter2 +=1;
+    //   }
+    // }, 40);
 
-    setInterval(() => {
-      // Third counter
-      if(this.counter3 == 100){
-        clearInterval();
-      }else{
-          this.counter3 +=1;
-      }
-    }, 20);
+    // setInterval(() => {
+    //   // Third counter
+    //   if(this.counter3 == 100){
+    //     clearInterval();
+    //   }else{
+    //       this.counter3 +=1;
+    //   }
+    // }, 20);
 
-    setInterval(() => {
-      // Fourth counter
-      if(this.counter4 == 30){
-        clearInterval();
-      }else{
-          this.counter4 +=1;
-      }
-    }, 65);
+    // setInterval(() => {
+    //   // Fourth counter
+    //   if(this.counter4 == 30){
+    //     clearInterval();
+    //   }else{
+    //       this.counter4 +=1;
+    //   }
+    // }, 65);
   }
 
-  // RESTART PROGRESS BARS
+  // FIXME: RESTART PROGRESS BARS
   onResetAll() {
-    this.counter1 = 0;
-    this.counter2 = 0;
-    this.counter3 = 0;
-    this.counter4 = 0;
+    // this.counter1 = 0;
+    // this.counter2 = 0;
+    // this.counter3 = 0;
+    // this.counter4 = 0;
   }
   
   onReset1() {
-    this.counter1 = 0;
+    // this.counter1 = 0;
   }
 
   onReset2() {
-    this.counter2 = 0;
+    // this.counter2 = 0;
   }
 
   onReset3() {
-    this.counter3 = 0;
+    // this.counter3 = 0;
   }
 
   onReset4() {
-    this.counter4 = 0;
+    // this.counter4 = 0;
   }
 }

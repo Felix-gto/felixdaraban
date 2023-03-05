@@ -28,7 +28,7 @@ a {
 .projects {
   margin-top: 7.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -36,8 +36,8 @@ a {
 .card {
   display: flex;
   height: 250px;
-  width: 625px;
-  margin: 5rem 0;
+  width: 485px;
+  margin: 5rem 1.5rem;
 }
 
 /* Colors */
@@ -63,8 +63,8 @@ a {
 
 /* Image */
 .card-image {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 215px;
   position: relative;
   left: 2rem;
   bottom: 5rem;
@@ -81,7 +81,7 @@ a {
 
 /* Content */
 .card-content {
-  margin-left: 6rem;
+  margin-left: 5rem;
 }
 
 .card-title {
@@ -104,10 +104,10 @@ li h3 {
 
 /* Buttons */
 .card-button {
-  width: 10rem;
-  height: 3.25rem;
+  width: 7.5rem;
+  height: 3rem;
   margin-left: 1rem !important;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -138,7 +138,7 @@ li h3 {
 }
 
 .course-row-2 {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .course {
@@ -147,7 +147,6 @@ li h3 {
 
 /* COURSE TITLE */
 .course-card-title {
-  width: 600px;
   background: #ebe5ef;
   transition: transform 0.5s;
   display: flex;
@@ -311,7 +310,7 @@ svg {
 
 /********** CALL TO ACTION -> CONTACT **********/
 .contact-section {
-  margin: 7.5rem 0 5rem;
+  padding: 0 7.5rem 10rem;
   display: flex;
   align-items: baseline;
 }
@@ -343,4 +342,278 @@ svg {
 .navbar-button-dark:hover {
   background-color: #532072;
   color: white;
+}
+
+.contact-me-button {
+  left: 0;
+  bottom: 0;
+  margin-left: 5rem;
+}
+
+/********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
+
+/***** Large screens <1600PX *****/
+@media (max-width: 1600px){
+  
+  .contact-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  h1 {
+    font-size: 3.15rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  .portfolio {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .card {
+    width: 485px;
+  }
+  
+}
+
+/***** 1 CARD / ROW  -> BREAKPOINT 1466PX *****/
+@media (max-width: 1466px){
+
+ /* Colors */
+.card1 {
+  background: #8c66a2;
+}
+
+.card2 {
+  background: #3dd5e4;
+}
+
+.card3 {
+  background: #8c66a2;
+}
+
+.card4 {
+  background: #3dd5e4;
+}
+
+.card5 {
+  background: #8c66a2;
+}
+
+}
+
+/***** LAPTOPS <1280PX *****/
+@media (max-width: 1280px){
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+}
+
+/***** MIDDLE: LAPTOPS - TABLETS (1075px instead of 1024 for Course title button width & wrap optimization *****/
+@media (max-width: 1075px){
+
+  /* MY LEARNING */
+  .course-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .course {
+    flex-basis: 75%;
+  }
+
+  .course-2, .course-4 {
+    margin-top: 2.5rem;
+  }
+
+}
+
+/***** TABLETS *****/
+@media (max-width: 768px){
+
+  .portfolio, .contact-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card {
+    display: flex;
+    height: auto;
+    width: auto;
+    margin: 5rem 0;
+    padding-right: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* MY LEARNING */
+
+  .course {
+    flex-basis: 90%;
+  }
+
+  /* CALL TO ACTION -> CONTACT */
+
+  .contact-section {
+    padding-bottom: 7.5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact-section a {
+    flex-basis: 100%;
+  }
+
+  .contact-me-button {
+    margin-left: 0;
+  }
+}
+
+/* CARD WRAP - BREAKING POINT 622PX */
+@media (max-width: 622px){
+
+  /* CARD */
+  .card {
+    justify-content: center;
+    flex-basis: 75%;
+    padding: 0;
+    border-radius: 10%;
+    height: 400px;
+  }
+
+  /* Image */
+  .card-image {
+    position: relative;
+    left: 3rem;
+    bottom: 5rem;
+    margin-right: 5rem;
+  }
+
+  /* Content */
+  .card-content {
+    margin-left: 0;
+    position: relative;
+    bottom: 5rem;
+  }
+
+  /* Buttons */
+  .card-button {
+    margin-left: 1rem !important;
+    width: 7rem;
+    height: 2.75rem;
+  }
+
+}
+
+/***** MOBILE & SMALL SCREENS *****/
+@media (max-width: 480px){
+
+  /* CARD */
+  .card {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }  
+
+  h3, li h3 {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .card-button {
+    margin-left: 0 !important;
+    width: 6.65rem;
+    height: 2.5rem;
+    font-size: 0.9rem !important;
+  }
+
+  .github-button {
+    margin-right: 0.75rem !important;
+  }
+
+  /* MY LEARNING */
+
+  .course {
+    flex-basis: 100%;
+  }
+
+  .course-card-title mat-card-subtitle {
+    font-size: 1rem;
+  }
+
+  /* CALL TO ACTION - CONTACT */
+
+  .contact-me-button {
+    height: 4rem;
+    width: 15rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }  
+}
+
+@media (max-width: 400px){
+
+  .card {
+    height: 365px;
+    flex-basis: 90%;
+  }
+
+  .card-image {
+    width: 125px;
+    height: 185px;
+    left: 3rem;
+    bottom: 4.5rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .card-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .card-button {
+    width: 10rem;
+    font-size: 1rem !important;
+  }
+
+  .github-button {
+    margin-right: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+}
+
+@media (max-width: 320px){
+
+  .card {
+    height: 365px;
+    flex-basis: 100%;
+  }
+
+  .contact-me-button {
+    height: 3.75rem;
+    width: 12.5rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
 }
