@@ -16,6 +16,11 @@
     margin-right: 5rem;
 }
 
+/* Hidden on small screens */
+.phone-small {
+    display: none;
+}
+
 .email-icon, .whatsapp-icon {
     color: #08B0CA;
     font-size: 1.75rem;
@@ -92,4 +97,117 @@ mat-label {
     color: green;
     font-weight: 500;
     font-size: 22px;
+}
+
+
+/********************  RESPONSIVENESS  <->  MEDIA QUERIES  ********************/
+
+/***** LARGE screens <1625PX *****/
+@media (max-width: 1625px){
+    .contact-page {
+        padding: 1rem 0rem 5rem;
+    }    
+
+    .contact {
+        justify-content: space-evenly;
+    }
+
+    form {
+        width: 30rem;
+    }
+
+    h1 {
+        font-size: 3.15rem;
+    }
+    
+    h2 {
+        font-size: 2.75rem;
+    }
+}
+
+/***** LAPTOPS <1280PX *****/
+@media (max-width: 1280px){
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+    font-size: 2.25rem;
+    }      
+}
+    
+/***** SMALL LAPTOPS & TABLETS *****/
+@media (max-width: 768px){
+    .left {
+        margin-right: 0;
+    }
+
+    form {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 600px){
+    
+}
+  
+/***** MOBILE & SMALL SCREENS *****/
+@media (max-width: 480px){
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+      h2 {
+        font-size: 1.25rem;
+    }  
+    
+      h3 {
+        font-size: 1rem;
+    }
+
+    form {
+        width: 17.5rem;
+        margin-top: 1rem;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .phone-small {
+        display: inline-block;
+        margin-bottom: 2.5rem;
+    }
+
+    ul {
+        padding-left: 2rem;
+    }
+
+    mat-form-field {
+        margin-top: 0;
+    }
+
+    mat-label {
+        font-size: 1rem;
+    }
+
+    mat-icon, .social-icon {
+        font-size: 1.5rem !important;
+    }
+
+     .social-icon {
+        font-size: 1.75rem !important;
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+        position: relative;
+        bottom: 3px;
+    }
+
+}
+  
+@media (max-width: 320px){
+    form {
+        width: 100%;
+    }  
 }

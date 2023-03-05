@@ -22,12 +22,16 @@
                     <li>
                         <h3 *ngIf="romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>Telefon: +40 740 461 261</h3>
                         <h3 *ngIf="!romanianSet" class="phone"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>Phone number: +40 740 461 261</h3>
+
+                        <!-- Displayed only on small screens (above hidden on small screens) -->
+                        <h3 *ngIf="romanianSet" class="phone-small"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>+40 740 461 261</h3>
+                        <h3 *ngIf="!romanianSet" class="phone-small"><span><mat-icon class="whatsapp-icon">phone</mat-icon></span>+40 740 461 261</h3>
+
                     </li>
 
                     <li>
                         <div class="facebook">
-                            <h3 *ngIf="romanianSet">Contactează-mă pe Facebook:</h3>
-                            <h3 *ngIf="!romanianSet">Contact me on Facebook:</h3>
+                            <h3>Facebook:</h3>
                             <a href="https://www.facebook.com/felix.daraban" target="_blank">
                                 <img src="../../assets/images/facebook-icon.png" alt="facebook-icon" class="social-icon facebook-icon">
                             </a>
@@ -36,8 +40,7 @@
 
                     <li>
                         <div class="linkedin">
-                            <h3 *ngIf="romanianSet">Contactează-mă pe Linkedin:</h3>
-                            <h3 *ngIf="!romanianSet">Contact me on Linkedin:</h3>
+                            <h3>Linkedin:</h3>
                             <a href="https://www.linkedin.com/in/felixdaraban" target="_blank">
                                 <img src="../../assets/images/linkedin-icon.png" alt="linkedin-icon" class="social-icon linkedin-icon">
                             </a> 
@@ -45,8 +48,8 @@
                     </li>
 
                     <li>
-                        <h3 *ngIf="romanianSet">Completează formularul de contact</h3>
-                        <h3 *ngIf="!romanianSet">Fill in the contact form</h3>
+                        <h3 *ngIf="romanianSet">Completează formularul de contact:</h3>
+                        <h3 *ngIf="!romanianSet">Fill in the contact form:</h3>
                     </li>
                 </ul>
             </div>
