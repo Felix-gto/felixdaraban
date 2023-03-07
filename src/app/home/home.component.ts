@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 // Dark Mode Service
 import { DarkModeService } from '../dark-mode.service';
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private darkModeService: DarkModeService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private router: Router
   ) {}
 
   // darkModeSet property = darkModeOn property from the DarkModeService (true or false)
@@ -49,7 +51,6 @@ export class HomeComponent implements OnInit {
   // About me button -> Navigate to the About me section
   navigateToAboutMe() {
     document.querySelector('#about-me')?.scrollIntoView({ behavior: "smooth" });
-  }
-
+  }  
 
 }

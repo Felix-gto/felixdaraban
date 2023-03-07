@@ -23,8 +23,8 @@ const appRoutes: Routes = [
 
 @NgModule({
 
-    // Import the RouterModule and pass your appRoutes constant as an argument -> registers the routes + Export the configured RouterModule
-    imports: [RouterModule.forRoot(appRoutes)],
+    // Import the RouterModule and pass your appRoutes constant as an argument -> registers the routes + Export the configured RouterModule. Added scrollPositionRestoration to scroll to top on route change...
+    imports: [RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'})],   
     exports: [RouterModule]
 
 })
