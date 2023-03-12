@@ -26,8 +26,8 @@
                 <a (click)="navigateToAboutMe()"><button *ngIf="!romanianSet" class="header-button about-me mat-elevation-z4" mat-raised-button>About me</button></a>
 
                 <!-- Contact me -->
-               <a href="/contact"><button *ngIf="romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button>Contactează-mă</button></a>
-               <a href="/contact"><button *ngIf="!romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button>Contact me</button></a>  
+               <a routerLink="/contact"><button *ngIf="romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button>Contactează-mă</button></a>
+               <a routerLink="/contact"><button *ngIf="!romanianSet" class="header-button contact-me mat-elevation-z4" mat-raised-button>Contact me</button></a>  
             </div>                   
 
         </div>
@@ -264,11 +264,11 @@
         <h2 *ngIf="romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Mai multe informații</h2>
         <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">More information</h2> 
 
-        <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="/portfolio">Portofoliu</a></h3>  
+        <h3 *ngIf="romanianSet"[ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portofoliu</a></h3>  
 
-        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a  [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="/portfolio">Portfolio</a></h3> 
+        <h3 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-portfolio"><span class="keyboard-symbol">{{"|"}}</span><a  [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/portfolio">Portfolio</a></h3> 
 
-        <h3 [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-cv"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" href="/cv">CV</a></h3>
+        <h3 [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" class="h3-title underlined-link underlined-cv"><span class="keyboard-symbol">{{"|"}}</span><a [ngStyle]="{color: darkModeSet ? 'white' : 'black'}" routerLink="/cv">CV</a></h3>
         
     </div>
 
@@ -279,7 +279,7 @@
         <h2 *ngIf="!romanianSet" [ngStyle]="{color: darkModeSet ? 'white' : 'black'}">Would you like to work with me?</h2> 
 
         <!-- Contact-me-now -->
-        <a href="/contact">
+        <a routerLink="/contact">
 
             <button *ngIf="romanianSet" mat-raised-button class="mat-elevation-z7 navbar-button contact-me-button" [ngClass]="{'navbar-button-dark': darkModeSet}">
             Contactează-mă acum >>

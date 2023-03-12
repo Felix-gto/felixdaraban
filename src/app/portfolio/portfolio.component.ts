@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
 
@@ -20,7 +21,8 @@ export class PortfolioComponent implements OnInit {
 
   constructor(
     private darkModeService: DarkModeService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private router: Router
   ) {}
 
   // darkModeSet property = darkModeOn property from the DarkModeService (true or false)

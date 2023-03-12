@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private darkModeService: DarkModeService,
     private languageService: LanguageService,
-    private router: Router
+    private router: Router,
   ) {}
 
   // darkModeSet property = darkModeOn property from the DarkModeService (true or false)

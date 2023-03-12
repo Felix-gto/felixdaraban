@@ -41,7 +41,7 @@ import { FormsModule } from '@angular/forms';
     PortfolioComponent,
     CvComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

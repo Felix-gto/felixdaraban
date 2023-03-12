@@ -412,6 +412,26 @@ h2 {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+
+  /* PADDINGS */
+
+  .about-section {
+    padding: 5rem 0;
+    }
+  
+  /* EXPERTISE & SKILLS */
+  .expertise-section {
+    padding-bottom: 5rem;
+  }
+    
+  .skills-section {
+    padding: 0 0 5rem;
+  }
+
+  /* ME & MY WORK + CALL TO ACTION */
+  .contact-section, .work-section {
+    padding-bottom: 5rem;
+  }
   
 }
 

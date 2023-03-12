@@ -442,6 +442,15 @@
     }
   
     /* CALL TO ACTION - CONTACT ME */
+
+    .contact-section {
+        padding-bottom: 5rem;
+    }
+
+    .contact-section h2 {
+        margin-top: 0;
+    }
+
     .contact-me-button {
       height: 4rem;
       width: 15rem;
