@@ -121,12 +121,13 @@ mat-label {
     }
     
     h2 {
-        font-size: 2.75rem;
+        font-size: 2.35rem;
     }
 }
 
 /***** LAPTOPS <1280PX *****/
 @media (max-width: 1280px){
+
     h1 {
         font-size: 2.75rem;
     }
@@ -155,11 +156,11 @@ mat-label {
 @media (max-width: 480px){
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
     }
     
       h2 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
     }  
     
       h3 {

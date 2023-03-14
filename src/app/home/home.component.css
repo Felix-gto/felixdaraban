@@ -227,7 +227,7 @@ h2 {
   }
 
   h2 {
-    font-size: 2.75rem;
+    font-size: 2.35rem;
   }
   
     /* Intro */
@@ -282,6 +282,7 @@ h2 {
 
   .title-image {
     width: 400px;
+    margin-left: 0;
   }
 
 }
@@ -375,15 +376,15 @@ h2 {
 @media (max-width: 480px){
 
   .title-image {
-    width: 175px;
+    width: 225px;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }  
 
   h3 {
@@ -437,7 +438,7 @@ h2 {
 
 @media (max-width: 320px){
   .title-image {
-    width: 150px;
+    width: 200px;
   }
 
   .contact-me-button {

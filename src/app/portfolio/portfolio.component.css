@@ -37,7 +37,7 @@ a {
   display: flex;
   height: 250px;
   width: 485px;
-  margin: 5rem 1.5rem;
+  margin: 6rem 1.5rem;
 }
 
 /* Colors */
@@ -138,7 +138,7 @@ li h3 {
 }
 
 .course-row-2 {
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 
 .course {
@@ -310,7 +310,7 @@ svg {
 
 /********** CALL TO ACTION -> CONTACT **********/
 .contact-section {
-  padding: 0 7.5rem 10rem;
+  padding: 10rem 7.5rem 10rem 0;
   display: flex;
   align-items: baseline;
 }
@@ -356,8 +356,7 @@ svg {
 @media (max-width: 1600px){
   
   .contact-section {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 7.5rem 2.5rem 7.5rem 0;
   }
 
   h1 {
@@ -365,7 +364,7 @@ svg {
   }
 
   h2 {
-    font-size: 2.75rem;
+    font-size: 2.35rem;
   }
 
   .portfolio {
@@ -432,7 +431,7 @@ svg {
   }
 
   .course-2, .course-4 {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
   }
 
 }
@@ -449,7 +448,7 @@ svg {
     display: flex;
     height: auto;
     width: auto;
-    margin: 5rem 0;
+    margin: 6rem 0;
     padding-right: 2.5rem;
     flex-wrap: wrap;
   }
@@ -463,7 +462,6 @@ svg {
   /* CALL TO ACTION -> CONTACT */
 
   .contact-section {
-    padding-bottom: 7.5rem;
     display: flex;
     flex-wrap: wrap;
   }
@@ -522,11 +520,11 @@ svg {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }  
 
   h3, li h3 {
@@ -557,7 +555,8 @@ svg {
 
   /* CALL TO ACTION - CONTACT */
   .contact-section {
-    padding-bottom: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
   
   .contact-me-button {
