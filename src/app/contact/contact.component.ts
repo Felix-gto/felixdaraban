@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+// Scroll to Top -> Chat GPT: To make an Angular app scroll to the top of the page when loading a component: Import the ViewChild and ElementRef modules from @angular/core.
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
 import { Subscription } from 'rxjs';
 
 
@@ -25,6 +27,9 @@ declare let Email: any;
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+
+  // Scroll to Top -> Chat GPT: you need to make sure that you have correctly defined the contactTop property in your component class using the @ViewChild decorator.
+  @ViewChild('contactTop', {static: true}) contactTop: ElementRef;
 
   constructor(
     private darkModeService: DarkModeService,
@@ -54,6 +59,12 @@ export class ContactComponent implements OnInit {
     this.languageSubscription = this.languageService.languageEmitter.subscribe(romanianOnStatus => {
       this.romanianSet = romanianOnStatus;
     })
+
+    // Scroll to Top -> Chat GPT: In the ngOnInit() method, call window.scrollTo() method with the x and y positions of the component's root element.
+    window.scrollTo({
+      top: this.contactTop.nativeElement.offsetTop,
+      behavior: 'smooth'
+    });
 
   }
 

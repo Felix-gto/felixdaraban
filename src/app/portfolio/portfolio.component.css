@@ -1,3 +1,9 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: smooth !important; /* fallback for browsers that don't support scroll-behavior */
+}
+
 .portfolio {
   font-family: "Satoshi", sans-serif;
   padding: 1rem 7.5rem 2.5rem;

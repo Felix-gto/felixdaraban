@@ -1,4 +1,11 @@
 /********** CV PAGE **********/
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth !important; /* fallback for browsers that don't support scroll-behavior */
+  }
+
 .cv-page {
   font-family: "Satoshi", sans-serif;
   padding: 0 15rem 0;

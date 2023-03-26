@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+// Scroll to Top -> Chat GPT: To make an Angular app scroll to the top of the page when loading a component: Import the ViewChild and ElementRef modules from @angular/core.
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
@@ -12,12 +13,16 @@ import { LanguageService } from '../language.service';
 // HostListener for listening to scroll event to load progress bar
 import { HostListener } from '@angular/core';
 
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+
+  // Scroll to Top -> Chat GPT: you need to make sure that you have correctly defined the portfolioTop property in your component class using the @ViewChild decorator.
+  @ViewChild('portfolioTop', {static: true}) portfolioTop: ElementRef;
 
   constructor(
     private darkModeService: DarkModeService,
@@ -48,6 +53,18 @@ export class PortfolioComponent implements OnInit {
     this.languageSubscription = this.languageService.languageEmitter.subscribe(romanianOnStatus => {
       this.romanianSet = romanianOnStatus;
     })
+
+    // Scroll to Top -> Chat GPT: In the ngOnInit() method, call window.scrollTo() method with the x and y positions of the component's root element.
+    window.scrollTo({
+      top: this.portfolioTop.nativeElement.offsetTop,
+      behavior: 'smooth'
+    });
+
+    // Alternative:
+    // document.documentElement.scrollTo({
+    //   top: 0,
+    //   behavior: 'smooth'
+    // });
 
   }
 
